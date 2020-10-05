@@ -98,8 +98,13 @@
             <h2>Apoyo Psicopedagógico para padres</h2>
             <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
               apoyo en el aprendizaje escolar tu hij@ en casa. </p>
+              <div class="row">
+                <div class="col-lg-6 png">
+                  <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
+                </div>
+            </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
+          <div class="col-lg-6 pt-4 pt-lg-0 apoyo-content2">
             <h3>
               Entrevista inicial con Padres: 
             </h3>
@@ -268,7 +273,7 @@
 
     <div class="container">
       <div class="row content">
-        <div class="col-lg-6 pt-4 pt-lg-0">
+        <div class="col-lg-6 pt-4 pt-lg-0 ">
           <h3>
             Se respetan las características individuales, 
                             gustos, intereses y ritmos aprendizaje. 
@@ -316,12 +321,34 @@
           <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Card image cap">
         </div> 
         <div class="card-body">
-          <h5 class="card-title text-center">Charla title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Leer Mas</a>
+          <h5 class="card-title text-center">Motivacionales</h5>
+          <p class="card-text">Ofrecemos herramientas de motivación personal, laboral, liderazgo, resolución de problemas, comunicación asertiva y trabajo en equipo</p>
+          <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Leer Mas</a>
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="col-md-4">
 
       <div class="card shadow" style="width: 18rem;">
@@ -329,39 +356,13 @@
           <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Card image cap">
         </div>
         <div class="card-body">
-          <h5 class="card-title text-center">Charla2 title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title text-center">Pedagógico-didácticos</h5>
+          <p class="card-text">Ofrecemos estrategias y herramientas para que los docentes puedan poner en práctica en su contexto aúlico y hacer de sus espacios más inclusivos para todos.</p>
           <button class="btn btn-primary" data-toggle="modal" data-target="ventanaModal">Leer Mas</button>
         </div>
       </div>
 
-      <!--- Modal1 -->
-      <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5>Titulo de la ventana modal</h5>
-              <button class="close" data-dismiss="modal" aria-label="Cerrar">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="alert alert-success">
-                <h4><strong> Datos se han guardado exitosamente</strong></h4>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-warning" type="button" data-dismiss="modal">
-                Cerrar
-              </button>
-              <button class="btn btn-success" type="button">
-                Aceptar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--- Modal1 -->
+
     </div>
     <div class="col-md-4">
     <div class="card shadow" style="width: 18rem;">
@@ -369,15 +370,67 @@
         <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Card image cap">
       </div>
       <div class="card-body">
-        <h5 class="card-title text-center">Charla3 title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title text-center">Especializados</h5>
+        <p class="card-text">Temáticas relacionadas a las necesidades educativas. Espacios de aprendizaje dirigidos y con pautas establecidas que se desarrollan en tiempo real.</p>
         <a href="#" class="btn btn-primary">Leer Mas</a>
       </div>
     </div>
   </div>
   <div class="row certificaciones">
-    <div class="col-12">
-      <h3 class="text-center">¡Certificaciones!</h3>
+    <div class="container">
+
+      <div class="row content">
+        <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 png">
+                <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
+              </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h2>Modalidad Presencial</h2>
+          <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
+            apoyo en el aprendizaje escolar tu hij@ en casa. </p>
+          <ul>
+            <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
+            <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
+            <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
+          </ul>
+          <p class="font-italic">
+            La idea es conocer todo el contexto alrededor 
+            de tu hijo y de ti, lo más detallado posible 
+            para orientarte.
+          </p>
+        </div>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h2>Foro E-learning</h2>
+          <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
+            apoyo en el aprendizaje escolar tu hij@ en casa. </p>
+          <ul>
+            <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
+            <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
+            <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
+          </ul>
+          <p class="font-italic">
+            La idea es conocer todo el contexto alrededor 
+            de tu hijo y de ti, lo más detallado posible 
+            para orientarte.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6 png">
+              <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
+            </div>
+        </div>
+
+      </div>
+      </div>
+
     </div>
   </div>  
   </div>
@@ -386,7 +439,7 @@
 <!-- End Background Fixed-Charlas Image -->
 
 <!-- Start Section7 Contactame -->
-<section class="site-section bg-light" id="contact-section" data-aos="fade">
+<section class="offset site-section bg-ligth" id="contactame" data-aos="fade">
   <div class="container">
     <div class="row mb-5">
       <div class="col-12 text-center">
@@ -422,18 +475,14 @@
 
         
 
-        <form action="#" class="p-5 bg-white">
-          
-          <h2 class="h4 text-black mb-5">Contact Form</h2>
+        <form method="POST" class="p-5 bg-white">
+          {% csrf_token %}
+          <h2 class="h4 text-black mb-5">Enviame un mensaje</h2>
 
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
-              <label class="text-black" for="fname">First Name</label>
-              <input type="text" id="fname" class="form-control">
-            </div>
-            <div class="col-md-6">
-              <label class="text-black" for="lname">Last Name</label>
-              <input type="text" id="lname" class="form-control">
+              <label class="text-black" for="fname">Nombre Completo</label>
+              {{ form.nombre }}
             </div>
           </div>
 
@@ -441,32 +490,30 @@
             
             <div class="col-md-12">
               <label class="text-black" for="email">Email</label> 
-              <input type="email" id="email" class="form-control">
+              {{ form.correo }}
             </div>
           </div>
 
           <div class="row form-group">
             
             <div class="col-md-12">
-              <label class="text-black" for="subject">Subject</label> 
-              <input type="subject" id="subject" class="form-control">
+              <label class="text-black" for="subject">Asunto</label> 
+              {{ form.asunto }}
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-12">
-              <label class="text-black" for="message">Message</label> 
-              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+              <label class="text-black" for="message">Mensaje</label> 
+              {{ form.mensaje }}
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-12">
-              <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+              <input type="submit" value="Enviar" class="btn btn-primary btn-md text-white">
             </div>
           </div>
-
-
         </form>
       </div>
       

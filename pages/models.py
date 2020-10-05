@@ -22,3 +22,65 @@ class Header(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ModelBlogBase(models.Model):
+	id = models.AutoField(primary_key = True)
+	estado = models.BooleanField('Estado', default=True)
+	fecha_creacion = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
+	fecha_modificacion = models.DateField('Fecha de Modificación', auto_now=True, auto_now_add=False)
+	fecha_eliminacion = models.DateField('Fecha de Eliminación', auto_now=True, auto_now_add=False)
+
+	class Meta:
+		abstract = True
+
+class Contacto(ModelBlogBase):
+	nombre = models.CharField('Nombre', max_length=100)
+	correo = models.EmailField('Correo Electrónico', max_length=200)
+	asunto = models.CharField('Asunto', max_length = 100)
+	mensaje = models.TextField('Mensaje')
+
+	class Meta:
+		verbose_name = 'Contacto'
+		verbose_name_plural = 'Contactos'
+
+	def __str__(self):
+		return self.asunto
+
+
+class Suscriptor(ModelBlogBase):
+	correo = models.EmailField(max_length=200)
+
+	class Meta:
+		verbose_name = 'Suscriptor'
+		verbose_name_plural = 'Suscriptores'
+
+	def __str__(self):
+		return self.correo
+
+
+class Web(ModelBlogBase):
+	nosotros = models.TextField('Nosotros')
+	telefono = models.CharField('Teléfono', max_length=10)
+	email = models.EmailField('Correo Electrónico', max_length=200)
+	direccion = models.CharField('Dirección', max_length=200)
+
+	class Meta:
+		verbose_name = 'Web'
+		verbose_name_plural = 'Webs'
+
+	def __str__(self):
+		return self.nosotros
+
+
+class RedesSociales(ModelBlogBase):
+	facebook = models.URLField('Facebook')
+	twitter = models.URLField('Twitter')
+	instagram = models.URLField('Instagram')
+
+	class Meta:
+		verbose_name = 'Red Social'
+		verbose_name_plural = 'Redes Sociales'
+
+	def __str__(self):
+		return self.facebook

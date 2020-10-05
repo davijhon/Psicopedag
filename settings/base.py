@@ -108,3 +108,23 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 
 ]
+
+# EMAIL BACKEND
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# DEFAULT_FROM_EMAIL = 'davidalejandrodand@gmail.com'
+
+EMAIL_HOST = 'smtp.googlemail.com'
+
+EMAIL_HOST_USER = 'davidalejandrodand@gmail.com'
+# EMAIL_HOST_USER = config(' EMAIL_HOST_USER')
+
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = 'Davena24$'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True

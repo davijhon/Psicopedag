@@ -13,7 +13,7 @@ html, body {
 .offset:before {
   display: block;
   content: "";
-  height: 4rem;
+  height: 2rem;
 }
 
 .navbar {
@@ -147,8 +147,8 @@ html, body {
 
 /*--- End Section 2 Apoyo ---*/
 .about .container {
-  margin-top: 160px;
-  margin-bottom: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .about .content h2 {
   font-weight: 700;
@@ -185,6 +185,12 @@ html, body {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+.png img{
+  height: 26rem;
+  width: 30rem;
+  position: relative;
+}
+
 /*--- End Section 2 Apoyo ---*/
 
 /* Start Section 2 */
