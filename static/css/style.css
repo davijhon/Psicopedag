@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+
+html, body {
+    width: 100%;
+    height: 50%;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.offset:before {
+  display: block;
+  content: "";
+  height: 4rem;
+}
+
+.navbar {
+  width: 0 auto;
+  padding: .5rem;
+  background: white;
+  box-shadow: 1px 1px 5px rgba(168, 168, 168, 0.719);
+}
+.navbar-nav li {
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-color: black; 
+}
+.navbar-brand img { /* ajuste del logo */
+  margin-left: 1rem;
+  height: 4rem;
+  width: 7rem;
+  position: relative;
+}
+.nav-link {
+  font-size: .9rem !important;
+  text-transform: uppercase; 
+}
+
+.alert {
+  margin-top: 8rem;
+}
+
+/*--- End Search Bar --*/
+
+/*--- Start Carousel ---*/
+.carousel-inner {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1;
+  width: 100%; 
+}
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1 {
+  font-size: 400%;
+  text-align: left;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-align: left;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+.btn-lg {
+  float: left;
+  color: white;
+  border-color: white;
+  border-width: medium;
+  /* border-radius: 0; */
+  padding: .6rem 1.3rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+/*--- End Carousel ---*/
+
+
+/*--- STARTCart Change Plan ---*/
+.change {
+  position: relative;
+}
+
+/*--- END Cart Change Plan ---*/
+
+
+
+/*--- Start Section 1  Conoceme ---*/
+.conoceme img {
+  width: 23rem;
+  border-radius: 40%;
+  height: 29rem;
+}
+.conoceme h1{
+  font-size: 2.8rem;
+
+}
+.conoceme h4{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.conoceme h3{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.conoceme ul{
+  font-size: 1rem;
+  text-align: left;
+}
+.valores {
+    padding: 1rem;
+    margin: 0 auto;
+}
+/* .heading h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+} */
+.valores p {
+  text-align: justify;
+  margin-block-start: 20px;
+  text-indent: 1.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+/*--- End Section 1 Conoceme---*/
+
+/*-- Start Background Fixed Image */
+#fixed {
+  background: url("img/fondo1.jpeg") no-repeat center center fixed;
+  display: table;
+	height: 25rem;
+	position: relative;
+	width: 100%;
+  background-size: cover;
+  filter: brightness(0.9);
+}
+/*-- End Background Fixed Image */
+
+/*--- End Section 2 Apoyo ---*/
+.about .container {
+  margin-top: 160px;
+  margin-bottom: 160px;
+}
+.about .content h2 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  color: #1f18e6;
+}
+
+.about .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.about .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #5a5af3;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+/*--- End Section 2 Apoyo ---*/
+
+/* Start Section 2 */
+.padding {
+  font-size: 1.6rem;
+  padding: 5rem 1rem;
+}
+.padding h3{
+  margin-bottom: 2rem;
+}
+
+
+h3.heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.dark {
+  /* background-color: rgba(0, 0, 0, 0.75); */
+  color: rgb(255, 255, 255);
+  padding: 7rem 2rem;
+}
+.heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: #23bb1e;
+    margin: 0 auto 2.8rem; 
+
+}
+
+/* End Section 2 */
+
+
+/*----- Start Section 3 Evaluacion -----*/
+#services {
+  background: #f4f5f8;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.services-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+.services-title p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+}
+.services-detail {
+  padding-top: 40px;
+}
+.services-selection {
+  padding: 5px;
+  margin-bottom: 40px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(102, 113, 228, 0.13);
+  text-align: center;
+}
+.services-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.motricidad-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.cognitiva-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.socioemocional-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.lecto-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.logico-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.lenguaje-icon {
+  font-size: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 80px;
+  width: 80px;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.services-description p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.services-description p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #748182;
+}
+.services-selection:hover .motricidad-icon {
+  color: #fff;
+  background: #d3212a;
+  transition: 1s;
+}
+.services-selection:hover .cognitiva-icon {
+  color: #fff;
+  background: #48df23e8;
+  transition: 1s;
+}
+.services-selection:hover .lenguaje-icon {
+  color: #fff;
+  background: #1f34f0e8;
+  transition: 1s;
+}
+.services-selection:hover .socioemocional-icon {
+  color: #fff;
+  background: #ffef0e;
+  transition: 1s;
+}
+.services-selection:hover .lecto-icon {
+  color: #fff;
+  background: #e79b0e;
+  transition: 1s;
+}
+.services-selection:hover .logico-icon {
+  color: #fff;
+  background: #48df23e8;
+  transition: 1s;
+}
+.services-selection:hover {
+  box-shadow: 0 15px 30px rgba(102, 113, 228, 0.50);
+  transition: 1s;
+}
+.evaluacion-heading {
+  margin-top: 2rem;
+}
+.subcontenido h4 {
+  text-align: left;
+  margin-bottom: 2rem;
+} 
+.subcontenido-2 p {
+}
+.col-12 {
+  padding: 0px;
+}
+/*----- End Section 3 Evaluacion -----*/
+
+/* ---------------- Start Section 4 Terapias -----------*/
+.terapias-title h2 {
+  text-align: right;
+}
+
+/*---------------- End Section 3  Terapias -------------*/
+
+
+/*-- Start Background fixed-charlas Image */
+#charlas {
+  background: #f2f2f2;
+  padding-top: 80px;
+}
+.inner {
+  overflow: hidden;
+}
+.inner .img1 {
+  height: 187px;
+}
+.inner .img2 {
+  height: 187px;
+}
+.inner .img3{
+  height: 187px;
+}
+.inner img {
+  transition: all 1.5s ease;
+}
+.inner:hover img{
+  transform: scale(1.5);
+}
+.certificaciones h3{
+  margin-top: 5rem;
+}
+/*-- End Background fixed-charlas Image */ 
+
+/*  footer */
+footer {
+  background-color: #4fa328;
+  color: #d5d5d5;
+  padding-top: 2rem;
+
+}
+footer img {
+  width: 3.6rem;
+  height: 3.6rem;
+	/* margin: 5rem 0; */
+}
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+}
+hr.socket {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+}
+/* end footer */
+
+/*-- Start login --*/
+.login {
+  margin-top: 6.2rem;
+}
+
+.btn-signin {
+  margin-bottom: 3.3rem;
+}
+
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
+
+/*-- End login --*/
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+/*--- End Pricing List ---*/
+
+/*--- Start Customuser detail --*/
+.container .user-detail {
+  margin-top: 9rem;
+}
+/*-- End Customuser detail --*/
+
+

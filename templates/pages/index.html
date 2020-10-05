@@ -1,0 +1,519 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ carousel_image1.img.url }}" class="d-block w-100" alt="...">
+        {% if carousel_image1.caption_title and carousel_image1.caption_content and carousel_image1.caption_button %}
+          <div class="carousel-caption d-none d-md-block">
+            <h1>{{ carousel_image1.caption_title }}</h1>
+            <h3>{{ carousel_image1.caption_content }}</h3>
+            <!-- <h3>a pharetra augue mollis interdum.</h3> -->
+            <a href="{{ carousel_image1.caption_button }}"><button type="button" class="btn btn-outline-secondary btn-lg">get start</button></a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="carousel-item">
+        <img src="{{ carousel_image2.img.url }}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ carousel_image3.img.url }}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+</div>
+
+<!-- Start Section 1 - Conoceme -->
+<div id="conoceme" class="offset">
+<div class="container-fluid">
+    
+  <div class="row valores padding">
+
+    <div class="col-12 text-center">
+			<h3 class="heading">Conoceme</h3>
+			<div class="heading-underline"></div>
+    </div>
+    
+      <div class="row conoceme">
+        <div class="col-md-4">
+          <img src="{% static 'css/img/fotoperfil.jpeg' %}">
+        </div>
+        <div class="col-md-8 conoceme text-center">
+          <h1>Lcda. Sandra Navas</h1>
+          <h3>Educación Especial mención discapacidad cognitiva</h3>
+          <p>Diplomada en Neuropsicopedagogía y problemas de aprendizaje en el 
+            Instituto de Neurociencias Aplicadas- Colombia, Inclusión Educativa 
+            Politécnico Superior de Colombia, Trastorno del Espectro Autista en 
+            Red para Crecer y Universidad de los Andes- Venezuela.</p>
+          <p>Profesional con experiencia en el modelo neuropsicopedagógico, con 
+            abordaje e intervención a población con Discapacidad Cognitiva, Motora, 
+            Sensorial, TEA, TDAH bajo los principios de la Educación Inclusiva. 
+            Mi propuesta está basada en generar planes de intervención y apoyo al colegio 
+            con ajustes razonables y flexibilización curricular, así como acompañamiento 
+            al entorno familiar.</p>
+            <div class="row conoceme">
+              <div class="col-md-6">
+                <h4>Ámbito de trabajo:</h4>
+                <ul>
+                  <li>Terapéutico a los educandos y sus familias</li>
+                  <li>Escolar directo en aula</li>
+                  <li>Acompañamiento docente</li>
+                  <li>Talleres de formación</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h4>Modalidades:</h4>
+                <ul>
+                  <li>Presencial</li>
+                  <li>Online</li>
+                </ul>
+              </div>
+            </div>
+        </div>     
+      </div>
+  </div>
+  <hr class="my-4">
+</div>
+</div>
+<!-- End Section 1 -->
+
+<!-- Start Background Fixed Image -->
+<div id="fixed">	
+</div>
+<!-- End Background Fixed Image -->
+
+<!-- Start Section 2 Apoyo -->
+<div id="apoyo" class="offset">
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Apoyo Psicopedagógico para padres</h2>
+            <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
+              apoyo en el aprendizaje escolar tu hij@ en casa. </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>
+              Entrevista inicial con Padres: 
+            </h3>
+            <ul>
+              <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
+              <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
+              <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
+            </ul>
+            <p class="font-italic">
+              La idea es conocer todo el contexto alrededor 
+              de tu hijo y de ti, lo más detallado posible 
+              para orientarte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+<!-- End Section 2 Apoyo -->
+
+<!-- Start Section 3 Evaluacion -->
+<div id="evaluacion" class="offset">
+<div class="col-12 colevaluacion">
+  <section id="services">
+    <div class="container">
+      <div class="services-title">
+        Evaluacion Psicopedagogica
+        <p>Valoración de las dimensiones del desarrollo humano:</p>
+      </div>
+
+      <div class="services-detail">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="motricidad-icon">
+                <i class="fa fa-code"></i>
+              </div>
+              <div class="services-description">
+                <p>Motricidad gruesa y fins</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="cognitiva-icon">
+                <i class="fa fa-desktop"></i>
+              </div>
+              <div class="services-description">
+                <p>Cognitiva</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="lenguaje-icon">
+                <i class="fa fa-mobile"></i>
+              </div>
+              <div class="services-description">
+                <p>Lenguaje expresivo-comprensivo</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="socioemocional-icon">
+                <i class="fa fa-chart"></i>
+              </div>
+              <div class="services-description">
+                <p>Socioemocional</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="lecto-icon">
+                <i class="fa fa-pencil"></i>
+              </div>
+              <div class="services-description">
+                <p>Habilidades lecto-escritas</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="services-selection">
+              <div class="logico-icon">
+                <i class="fa fa-comments-o"></i>
+              </div>
+              <div class="services-description">
+                <p>Lógico matemáticas</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content-2">
+              <p class="font-italic">Se emplea batería de evaluación psicopedagógica integral 
+                acorde a la edad y grado (se toma en cuenta 
+                consideraciones de flexibilidad).
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 text-center evaluacion-heading">
+            <h3 class="heading">Consta de:</h3>
+            <div class="heading-underline"></div>
+          </div>
+
+          <div class="col-12 text-center subcontenido">
+            <h4>(1) Sesión únicamente con padres: entrevista formal para llenado de anamnesis.</h4>
+            <h4>(4) Sesiones de Evaluación directa con el Educando.</h4>
+          </div>
+
+          <div class="col-12 text-center subcontenido-2">
+            <p>De ser necesario, se anexan (2) sesiones extras para aplicar 
+              Test Perceptivo Visual Frostig, es sugerido a los padres en caso de evidenciar 
+              necesidades en este aspecto y necesarias para orientar de forma concreta</p>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <ul style="list-style-type:none" >
+                <li></li><i class="fa fa-pencil"></i>Se identifican y describen las dimensiones del desarrollo humano.</li>
+                <li></li><i class="fa fa-pencil"></i>Se emite presunción diagnóstica, observaciones y recomendaciones.</li>
+                <li></li><i class="fa fa-pencil"></i>Se recomiendan apoyos psicopedagógicos, terapéuticos y orientación a padres de familia. </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+<!-- End Section 3 Evaluacion -->
+
+<!-- Start Section 4 TERAPIAS -->
+<div id="terapias" class="offset">
+  <section id="about" class="about">
+
+    <div class="container">
+      <div class="row content">
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h3>
+            Se respetan las características individuales, 
+                            gustos, intereses y ritmos aprendizaje. 
+          </h3>
+          <ul>
+            <li><i class="fa fa-check"></i> Se apuesta a la Inclusión. Interdependencia. Independencia.</li>
+            <li><i class="fa fa-check"></i> Se realiza debido seguimiento, revisión de objetivos y alta del servicio.</li>
+            <li><i class="fa fa-check"></i> En este proceso se solicita apoyo de los padres de 
+              familia, de los docentes y el resto del equipo terapeútico.</li>
+          </ul>
+          <p class="font-italic">
+            Desde una visión neurodidáctica se hace uso de recursos y 
+                            herramientas lúdico -didácticas, autocorrectivos, se emplean 
+                            actividades transicionales, autorregulativas, entrenamiento 
+                            cognitivo-conductual y se toman en cuenta los canales de aprendizaje.
+          </p>
+        </div>
+        <div class="col-lg-6 terapias-title">
+          <h2>Atención Psicopedagógica</h2>
+          <p>Intervención terapéutica con fines y alcances, 
+            que respondan a las particularidades del desarrollo 
+            evolutivo del estudiante. </p>
+        </div>     
+      </div>
+    </div>
+
+  </section>
+</div>
+<!-- End Section 4 TERAPIAS -->
+
+<!-- Start Background Fixed-Charlas Image -->
+<div id="charlas" class="offset">
+  <div class="container">
+    <div class="row charlas">
+        <div class="col-12">
+          <h3 class="heading text-center">Charlas</h3>
+          <div class="heading-underline"></div>
+        </div>
+    </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Card image cap">
+        </div> 
+        <div class="card-body">
+          <h5 class="card-title text-center">Charla title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Leer Mas</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+      <div class="card shadow" style="width: 18rem;">
+        <div class="inner">
+          <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">Charla2 title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button class="btn btn-primary" data-toggle="modal" data-target="ventanaModal">Leer Mas</button>
+        </div>
+      </div>
+
+      <!--- Modal1 -->
+      <div class="modal" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="tituloVentana" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>Titulo de la ventana modal</h5>
+              <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success">
+                <h4><strong> Datos se han guardado exitosamente</strong></h4>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-warning" type="button" data-dismiss="modal">
+                Cerrar
+              </button>
+              <button class="btn btn-success" type="button">
+                Aceptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- Modal1 -->
+    </div>
+    <div class="col-md-4">
+    <div class="card shadow" style="width: 18rem;">
+      <div class="inner">
+        <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">Charla3 title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Leer Mas</a>
+      </div>
+    </div>
+  </div>
+  <div class="row certificaciones">
+    <div class="col-12">
+      <h3 class="text-center">¡Certificaciones!</h3>
+    </div>
+  </div>  
+  </div>
+</div>
+</div>
+<!-- End Background Fixed-Charlas Image -->
+
+<!-- Start Section7 Contactame -->
+<section class="site-section bg-light" id="contact-section" data-aos="fade">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">Contactame</h2>
+        <div class="heading-underline"></div> 
+      </div>
+    </div>
+    <div class="row mb-5">
+      
+
+
+      <div class="col-md-4 text-center">
+        <p class="mb-4">
+          <span class="icon-room d-block h4 text-primary"></span>
+          <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p class="mb-4">
+          <span class="icon-phone d-block h4 text-primary"></span>
+          <a href="#">+1 232 3235 324</a>
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <p class="mb-0">
+          <span class="icon-mail_outline d-block h4 text-primary"></span>
+          <a href="#">youremail@domain.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mb-5">
+
+        
+
+        <form action="#" class="p-5 bg-white">
+          
+          <h2 class="h4 text-black mb-5">Contact Form</h2>
+
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="text-black" for="fname">First Name</label>
+              <input type="text" id="fname" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="text-black" for="lname">Last Name</label>
+              <input type="text" id="lname" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+            
+            <div class="col-md-12">
+              <label class="text-black" for="email">Email</label> 
+              <input type="email" id="email" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+            
+            <div class="col-md-12">
+              <label class="text-black" for="subject">Subject</label> 
+              <input type="subject" id="subject" class="form-control">
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="text-black" for="message">Message</label> 
+              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End Section7 Contactame -->
+
+<!--- Footer -->
+<!--- Footer -->
+<footer>
+	<div class="container-fluid text-center">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg">
+				<hr class="light">
+				<p>555-555-5555</p>
+				<p>email@email.com</p>
+				<p>100 Street None</p>
+				<p>City, State, 00000</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Our hours</h5>
+				<hr class="light">
+				<p>Monday 9am - 5pm</p>
+        <p>Saturday 10am - 4pm</p>
+        <p>Monday 9am - 5pm</p>
+				<p>Saturday 10am - 4pm</p>
+      </div>
+      <div class="col-md-4">
+				<hr class="light">
+				<h5>Services Area</h5>
+				<hr class="light">
+				<p>City, Zip Code</p>
+        <p>City, Zip Code</p>
+        <p>City, Zip Code</p>
+				<p>City, Zip Code</p>
+      </div>
+      
+      
+    </div>
+    <hr class="socket">
+    &copy; Davijhon Theme.
+	<!-- </div> -->
+</footer>
+<!--- Footer -->
+{% endblock content %}
+
+
