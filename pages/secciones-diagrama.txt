@@ -183,22 +183,35 @@ Espacios de aprendizaje dirigidos y con pautas establecidas que se desarrollan e
 #-Motivacionales: ofrecemos herramientas de motivación personal, laboral, liderazgo, resolución de problemas, comunicación asertiva y trabajo en equipo. Empleamos un modelo llamado Maestro en Apoyo de Maestros, un Canadiense llamado Gordon Porter.
 #-Pedagógico-didácticos: ofrecemos estrategias y herramientas para que los docentes puedan poner en práctica en su contexto aúlico y hacer de sus espacios más inclusivos para todos. Direccionamos estas actividades al respeto de las diferencias, ritmos y estilos de aprendizaje.
 #-Especializados: temáticas relacionadas a las necesidades educativas que requieren abordajes más técnicos.
+
 Algunas temáticas de capacitación:
--Transición de la Educación Especial a la Educación Inclusiva.
--Buenas prácticas de Educación Inclusiva
--Detección temprana de necesidades educativas en el aula 
--Estrategias de abordaje psicopedagógico en el Aula
+motivacionales:
+    -estrategia maestros en apoyos de maestros
+    -educacion conciente
+    -comunicacion efectiva en la educacion
+    -Sens ibilización a la Comunidad Educativa sobre Autismo
+
+
+pedagogica-didacticas
+    -Estrategias de abordaje psicopedagógico en el Aula
 -Ejercicios de aprestamiento
 -¿Cómo trabajar la Lecto escritura?
 -Recursos Inclusivos en el Aula: Educ. Inicial, Educ. Básica y Educ. Media diversificada.
+
+
+Especializados
+-Transición de la Educación Especial a la Educación Inclusiva.
+-Buenas prácticas de Educación Inclusiva
+-Detección temprana de necesidades educativas en el aula 
 -Abordaje del Acoso Escolar
+
+
 -Rol del Tutor Educativo
 -Atención a los estilos de aprendizaje en el aula
 -Abordaje psicoeducativo de estudiantes con TEA
 -Rol Educativo de los Padres en el desarrollo Integral
 -Charla para padres de niños con Autismo
--Sensibilización a la Comunidad Educativa sobre Autismo
--Entre otros.
+
 
 Section 6:
     TOOLBOX 

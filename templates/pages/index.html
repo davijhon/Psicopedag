@@ -16,8 +16,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h1>{{ carousel_image1.caption_title }}</h1>
             <h3>{{ carousel_image1.caption_content }}</h3>
-            <!-- <h3>a pharetra augue mollis interdum.</h3> -->
-            <a href="{{ carousel_image1.caption_button }}"><button type="button" class="btn btn-outline-secondary btn-lg">get start</button></a>
+            <a href="{{ carousel_image1.caption_button }}"><button type="button" class="btn btn-outline-warning btn-lg" >Bienvenidos</button></a>
           </div>
         {% endif %}
       </div>
@@ -36,18 +35,18 @@
     
   <div class="row valores padding">
 
-    <div class="col-12 text-center">
-			<h3 class="heading">Conoceme</h3>
-			<div class="heading-underline"></div>
+    <div class="col-12 text-center conoceme">
+			<h1>Conóceme</h1>
+			<!-- <div class="heading-underline"></div> -->
     </div>
     
       <div class="row conoceme">
         <div class="col-md-4">
-          <img src="{% static 'css/img/fotoperfil.jpeg' %}">
+          <img src="{% static 'css/img/fotoperfil.jpeg' %}" data-aos="fade-right">
         </div>
         <div class="col-md-8 conoceme text-center">
-          <h1>Lcda. Sandra Navas</h1>
-          <h3>Educación Especial mención discapacidad cognitiva</h3>
+          <h2>Lcda. Sandra Navas</h2>
+          <h2>Educación Especial mención discapacidad cognitiva</h2>
           <p>Diplomada en Neuropsicopedagogía y problemas de aprendizaje en el 
             Instituto de Neurociencias Aplicadas- Colombia, Inclusión Educativa 
             Politécnico Superior de Colombia, Trastorno del Espectro Autista en 
@@ -59,7 +58,7 @@
             con ajustes razonables y flexibilización curricular, así como acompañamiento 
             al entorno familiar.</p>
             <div class="row conoceme">
-              <div class="col-md-6">
+              <div class="col-md-6" data-aos="fade-up">
                 <h4>Ámbito de trabajo:</h4>
                 <ul>
                   <li>Terapéutico a los educandos y sus familias</li>
@@ -68,7 +67,7 @@
                   <li>Talleres de formación</li>
                 </ul>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" data-aos="fade-up">
                 <h4>Modalidades:</h4>
                 <ul>
                   <li>Presencial</li>
@@ -79,7 +78,7 @@
         </div>     
       </div>
   </div>
-  <hr class="my-4">
+  <!-- <hr class="my-4"> -->
 </div>
 </div>
 <!-- End Section 1 -->
@@ -91,23 +90,23 @@
 
 <!-- Start Section 2 Apoyo -->
 <div id="apoyo" class="offset">
-    <section id="about" class="about">
+    <section id="apoyo" class="apoyo">
       <div class="container">
         <div class="row content">
-          <div class="col-lg-6">
-            <h2>Apoyo Psicopedagógico para padres</h2>
-            <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
+          <div class="col-lg-6" data-aos="fade-down">
+            <h1>Apoyo Psicopedagógico para padres</h1>
+           <p> Se identifica tu saber de padre y las necesidades que se derivan del 
               apoyo en el aprendizaje escolar tu hij@ en casa. </p>
               <div class="row">
-                <div class="col-lg-6 png">
+                <div class="col-lg-6 png" data-aos="fade-right">
                   <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
                 </div>
             </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 apoyo-content2">
-            <h3>
+          <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-left">
+            <h2>
               Entrevista inicial con Padres: 
-            </h3>
+            </h2>
             <ul>
               <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
               <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
@@ -131,7 +130,7 @@
   <section id="services">
     <div class="container">
       <div class="services-title">
-        Evaluacion Psicopedagogica
+       <h1>Evaluacion Psicopedagogica</h1>
         <p>Valoración de las dimensiones del desarrollo humano:</p>
       </div>
 
@@ -143,117 +142,112 @@
                 <i class="fa fa-code"></i>
               </div>
               <div class="services-description">
-                <p>Motricidad gruesa y fins</p>
+                <h2>Motricidad Gruesa y Fina</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                  La base del aprendizaje se inicia en el control y dominio del propio cuerpo. Implica la coordinación de movimientos amplios.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="services-selection">
               <div class="cognitiva-icon">
                 <i class="fa fa-desktop"></i>
               </div>
               <div class="services-description">
-                <p>Cognitiva</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                <h2>Cognitiva</h2>
+                <p id="cognitiva">
+                  Estimular capacidades de percepción, comprensión, memorización, análisis, razonamiento, atención. 
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="services-selection">
               <div class="lenguaje-icon">
                 <i class="fa fa-mobile"></i>
               </div>
               <div class="services-description">
-                <p>Lenguaje expresivo-comprensivo</p>
+                <h2>Lenguaje Expresivo-Comprensivo</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                  Habilidades para comunicarnos con el entorno, mediante la expresión gestual, oral, escrita y la comprensión del significado de las mismas. 
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="services-selection">
               <div class="socioemocional-icon">
                 <i class="fa fa-chart"></i>
               </div>
               <div class="services-description">
-                <p>Socioemocional</p>
+                <h2>Socioemocional</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                  Procesos de iniciación y respuesta a la interacción social, dependencia-interdependencia, expresión de sentimientos y emociones, aprendizaje de pautas de comportamiento relacionadas con el autocuidado, entre otros. 
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="services-selection">
               <div class="lecto-icon">
                 <i class="fa fa-pencil"></i>
               </div>
               <div class="services-description">
-                <p>Habilidades lecto-escritas</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                <h2>Habilidades Lecto-Escritas</h2>
+                <p id="habilidades">
+                  Funcionamiento en cuánto a la fluidez verbal, nivel de lectura, comprensión lectora y uso de la escritura como medio de comunicación y expresión.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="services-selection">
               <div class="logico-icon">
                 <i class="fa fa-comments-o"></i>
               </div>
               <div class="services-description">
-                <p>Lógico matemáticas</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                <h2>Lógico Matemáticas</h2>
+                <p id="logico">
+                  Funcionamiento a nivel escolar en cuánto a la asimilación y uso de los conceptos básicos de cantidad y número, operaciones de cálculo.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="content-2">
-              <p class="font-italic">Se emplea batería de evaluación psicopedagógica integral 
-                acorde a la edad y grado (se toma en cuenta 
-                consideraciones de flexibilidad).
-              </p>
-            </div>
-          </div>
-
+      
           <div class="col-12 text-center evaluacion-heading">
-            <h3 class="heading">Consta de:</h3>
-            <div class="heading-underline"></div>
-          </div>
-
-          <div class="col-12 text-center subcontenido">
-            <h4>(1) Sesión únicamente con padres: entrevista formal para llenado de anamnesis.</h4>
-            <h4>(4) Sesiones de Evaluación directa con el Educando.</h4>
-          </div>
-
-          <div class="col-12 text-center subcontenido-2">
-            <p>De ser necesario, se anexan (2) sesiones extras para aplicar 
-              Test Perceptivo Visual Frostig, es sugerido a los padres en caso de evidenciar 
-              necesidades en este aspecto y necesarias para orientar de forma concreta</p>
+            <h3>Descripción:</h3>
+            <!-- <div class="heading-underline"></div> -->
           </div>
 
           <div class="row">
-            <div class="col-12">
-              <ul style="list-style-type:none" >
-                <li></li><i class="fa fa-pencil"></i>Se identifican y describen las dimensiones del desarrollo humano.</li>
-                <li></li><i class="fa fa-pencil"></i>Se emite presunción diagnóstica, observaciones y recomendaciones.</li>
-                <li></li><i class="fa fa-pencil"></i>Se recomiendan apoyos psicopedagógicos, terapéuticos y orientación a padres de familia. </li>
+            <div class="col-lg-12 subcontenido3">
+              <div class="content2">
+                <p class="font-italic">Se emplea batería de evaluación psicopedagógica integral 
+                  acorde a la edad y grado (se toma en cuenta 
+                  consideraciones de flexibilidad).
+                </p>
+              </div>
+            </div>
+
+          
+          <div class="row" data-aos="fade-up"
+          data-aos-duration="3000">
+            <div class="col-12 description">
+              <ul style="list-style-type:none">
+                  <li><h4><i class="fa fa-check"></i> (1) Sesión únicamente con padres: entrevista formal para llenado de anamnesis.</h4></li>
+                  <li><h4><i class="fa fa-check"></i> (4) Sesiones de Evaluación directa con el Educando.</h4></li>
+                  <li><h4><i class="fa fa-check"></i> De ser necesario, se anexan (2) sesiones extras para aplicar Test Perceptivo Visual Frostig, es sugerido a los padres en caso de evidenciar necesidades en este aspecto y necesarias para orientar de forma concreta.</h4></li>                
+                  <li><h4><i class="fa fa-check"></i> Se identifican y describen las dimensiones del desarrollo humano.</h4></li>
+                  <li><h4><i class="fa fa-check"></i> Se emite presunción diagnóstica, observaciones y recomendaciones.</h4></li>
+                  <li><h4><i class="fa fa-check"></i> Se recomiendan apoyos psicopedagógicos, terapéuticos y orientación a padres de familia.</h4></li>
               </ul>
             </div>
           </div>
@@ -269,36 +263,38 @@
 
 <!-- Start Section 4 TERAPIAS -->
 <div id="terapias" class="offset">
-  <section id="about" class="about">
-
+  <section id="terapias" class="terapias">
     <div class="container">
       <div class="row content">
-        <div class="col-lg-6 pt-4 pt-lg-0 ">
-          <h3>
-            Se respetan las características individuales, 
-                            gustos, intereses y ritmos aprendizaje. 
-          </h3>
+        <div class="col-lg-6" data-aos="fade-down">
+          <h1>Atención Psicopedagógica</h1>
+         <p> En este proceso se solicita apoyo de los padres de 
+          familia, de los docentes y el resto del equipo terapeútico. </p>
+            <div class="row">
+              <div class="col-lg-6 png" data-aos="fade-right">
+                <img src="{% static 'css/img/terapiaspng.png' %}"  alt="">
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-left">
           <ul>
+            <li><i class="fa fa-check"></i> Intervención terapéutica con fines y alcances, 
+              que respondan a las particularidades del desarrollo 
+              evolutivo del estudiante.</li>
+            <li><i class="fa fa-check"></i> Se respetan las características individuales, 
+              gustos, intereses y ritmos aprendizaje.</li>
+            <li><i class="fa fa-check"></i> Desde una visión neurodidáctica se hace uso de recursos y 
+              herramientas lúdico -didácticas, autocorrectivos, se emplean 
+              actividades transicionales, autorregulativas, entrenamiento 
+              cognitivo-conductual y se toman en cuenta los canales de aprendizaje.</li>
             <li><i class="fa fa-check"></i> Se apuesta a la Inclusión. Interdependencia. Independencia.</li>
             <li><i class="fa fa-check"></i> Se realiza debido seguimiento, revisión de objetivos y alta del servicio.</li>
-            <li><i class="fa fa-check"></i> En este proceso se solicita apoyo de los padres de 
-              familia, de los docentes y el resto del equipo terapeútico.</li>
           </ul>
-          <p class="font-italic">
-            Desde una visión neurodidáctica se hace uso de recursos y 
-                            herramientas lúdico -didácticas, autocorrectivos, se emplean 
-                            actividades transicionales, autorregulativas, entrenamiento 
-                            cognitivo-conductual y se toman en cuenta los canales de aprendizaje.
-          </p>
+
         </div>
-        <div class="col-lg-6 terapias-title">
-          <h2>Atención Psicopedagógica</h2>
-          <p>Intervención terapéutica con fines y alcances, 
-            que respondan a las particularidades del desarrollo 
-            evolutivo del estudiante. </p>
-        </div>     
       </div>
     </div>
+  </section>
 
   </section>
 </div>
@@ -308,143 +304,240 @@
 <div id="charlas" class="offset">
   <div class="container">
     <div class="row charlas">
-        <div class="col-12">
-          <h3 class="heading text-center">Charlas</h3>
-          <div class="heading-underline"></div>
+        <div class="col-12 text-center">
+          <h1>Charlas</h1>
         </div>
     </div>
 
   <div class="row justify-content-center">
-    <div class="col-md-4">
+
+    <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
       <div class="card shadow" style="width: 18rem;">
         <div class="inner">
           <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Card image cap">
         </div> 
         <div class="card-body">
-          <h5 class="card-title text-center">Motivacionales</h5>
+          <h2 class="card-title text-center">Motivacionales</h2>
           <p class="card-text">Ofrecemos herramientas de motivación personal, laboral, liderazgo, resolución de problemas, comunicación asertiva y trabajo en equipo</p>
-          <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Leer Mas</a>
+          <a id="btnmotivaconales" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">Leer Mas</a>
         </div>
       </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <!-- Start Modal Motivacionales-->
+    <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Motivacionales</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <h2>Algunas temáticas de capacitación:</h2>
+            <ul>
+              <li>Estrategia maestros en apoyos de maestros</li>
+              <li>Educacion conciente</li>
+              <li>Comunicacion efectiva en la educacion</li>
+              <li>Sens ibilización a la Comunidad Educativa sobre Autismo</li>
+            </ul>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- End Modal Motivacionales-->
 
-    <div class="col-md-4">
-
+    <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
       <div class="card shadow" style="width: 18rem;">
         <div class="inner">
           <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Card image cap">
         </div>
         <div class="card-body">
-          <h5 class="card-title text-center">Pedagógico-didácticos</h5>
+          <h2 class="card-title text-center">Pedagógico-didácticos</h2>
           <p class="card-text">Ofrecemos estrategias y herramientas para que los docentes puedan poner en práctica en su contexto aúlico y hacer de sus espacios más inclusivos para todos.</p>
-          <button class="btn btn-primary" data-toggle="modal" data-target="ventanaModal">Leer Mas</button>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">Leer Mas</button>
         </div>
       </div>
-
-
     </div>
-    <div class="col-md-4">
-    <div class="card shadow" style="width: 18rem;">
-      <div class="inner">
-        <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Card image cap">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title text-center">Especializados</h5>
-        <p class="card-text">Temáticas relacionadas a las necesidades educativas. Espacios de aprendizaje dirigidos y con pautas establecidas que se desarrollan en tiempo real.</p>
-        <a href="#" class="btn btn-primary">Leer Mas</a>
-      </div>
-    </div>
-  </div>
-  <div class="row certificaciones">
-    <div class="container">
 
-      <div class="row content">
-        <div class="col-lg-6">
-            <div class="row">
-              <div class="col-lg-6 png">
-                <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
-              </div>
+       <!-- Start Modal Pedagógico-didácticos-->
+       <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Pedagógico-didácticos</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Algunas temáticas de capacitación:</h2>
+              <ul>
+                <li>Estrategias de abordaje psicopedagógico en el Aula</li>
+                <li>Ejercicios de aprestamiento</li>
+                <li>¿Cómo trabajar la Lecto escritura?</li>
+                <li>Recursos Inclusivos en el Aula: Educ. Inicial, Educ. Básica y Educ. Media diversificada.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- End Modal Pedagógico-didácticos-->
 
-        <div class="col-lg-6 pt-4 pt-lg-0">
-          <h2>Modalidad Presencial</h2>
-          <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
-            apoyo en el aprendizaje escolar tu hij@ en casa. </p>
-          <ul>
-            <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
-            <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
-            <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
-          </ul>
-          <p class="font-italic">
-            La idea es conocer todo el contexto alrededor 
-            de tu hijo y de ti, lo más detallado posible 
-            para orientarte.
-          </p>
+      <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
+        <div class="card shadow" style="width: 18rem;">
+          <div class="inner">
+            <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h2 class="card-title text-center">Especializados</h2>
+            <p class="card-text">Temáticas relacionadas a las necesidades educativas. Espacios de aprendizaje dirigidos y con pautas establecidas que se desarrollan en tiempo real.</p>
+            <button id="btnespecializados" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3">Leer Mas</button>
+          </div>
         </div>
       </div>
 
-      <div class="row content">
-        <div class="col-lg-6 pt-4 pt-lg-0">
-          <h2>Foro E-learning</h2>
-          <p>Se realiza llenado de anamnesis. Se identifica tu saber de padre y las necesidades que se derivan del 
-            apoyo en el aprendizaje escolar tu hij@ en casa. </p>
-          <ul>
-            <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
-            <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
-            <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
-          </ul>
-          <p class="font-italic">
-            La idea es conocer todo el contexto alrededor 
-            de tu hijo y de ti, lo más detallado posible 
-            para orientarte.
-          </p>
-        </div>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-6 png">
-              <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
+      <!-- Start Modal Pedagógico-didácticos-->
+      <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Especializados</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="modal-body">
+              <h2>Algunas temáticas de capacitación:</h2>
+              <ul>
+                <li>Transición de la Educación Especial a la Educación Inclusiva.</li>
+                <li>Buenas prácticas de Educación Inclusiva</li>
+                <li>Detección temprana de necesidades educativas en el aula</li>
+                <li>Rol del Tutor Educativo</li>
+                <li>Atención a los estilos de aprendizaje en el aula</li>
+                <li>Abordaje psicoeducativo de estudiantes con TEA</li>
+                <li>Rol Educativo de los Padres en el desarrollo Integral</li>
+                <li>Charla para padres de niños con Autismo</li>
+                <li>Abordaje del Acoso Escolar</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
-
       </div>
-      </div>
+      <!-- End Modal Pedagógico-didácticos-->
 
-    </div>
-  </div>  
+      <div id="some-box">
+        <!-- <h1>Section Heading</h1> -->
+      
+        <article class="row" id="idea-one" data-aos="fade-left">
+          <div><img src="{% static 'css/img/apoyoparapadres.png' %}" /></div>
+          <div class="presencial">
+            <h1>Modalidad Presencial</h1>
+            <ul>
+              <li>Espacio, cómodo, privado, apacible.</li>
+              <li> Un lugar donde los padres de familia puedan acercarse a solicitar información sobre las problemáticas que están presentando en sus centros educativos con sus hijos.</li>
+              <li>Acompañamiento docente.</li>
+              <li>Se brindará orientaciones, que pueden incluir prácticas directas en los centros educativos de acuerdo a la necesidad.</li>
+            </ul>
+            
+          </div>
+        </article>
+      
+        <article class="row" id="idea-two" data-aos="fade-right">
+          <div>
+            <h1>Foro E-learning</h1>
+                <ul>
+                  <li>Espacios de aprendizaje dirigidos. </li>
+                  <li>Con pautas establecidas que se desarrollan en tiempo real de acuerdo a una temática específica.</li>
+                  <li>Los interactuantes pueden exponer sus inquietudes y estas pueden responderse bajo un sentido de asistencia virtual.</li>
+                  <li>Acompañadas de material digital como presentaciones, imágenes, videos, audios, escritos y material de apoyo a través de email.</li>
+                </ul>
+          </div>
+          <div><img src="{% static 'css/img/apoyoparapadres.png' %}"/></div>
+        </article>
+
   </div>
+</div>
 </div>
 </div>
 <!-- End Background Fixed-Charlas Image -->
 
+
+<!-- Start Section 6 - ToolBox -->
+<div id="toolbox" class="offset">
+  <div class="container">
+      
+    <div class="row toolbox padding">
+        
+        <div class="row toolbox">
+          <div class="col-md-6">
+            <img src="{% static 'css/img/toolbox.jpeg' %}" data-aos="fade-right">
+          </div>
+          <div class="col-md-6 toolboxcontent text-center">
+            <h1>Caja de herramientas</h1>
+            <p>En esta oportunidad les comparto una guía de actividades para que la empleen en el acompañamiento en casa, así como en el abordaje docente o terapeútico respectivamente. Cuenta con actividades que responden a las habilidades en secuencia para lecto-escritura del 1er grado, van de lo simple a lo complejo, involucran consignas que favorecen los dispositivos básicos de aprendizaje, las funciones ejecutivas, los canales sensoriales, actividades transicionales y ejercicios socioemocionales.</p>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-warning downloadfree">Version Gratuita</button>
+                </div>
+                <div class="col-md-6">
+                  <a type="button" class="btn btn-success downloadpay" data-toggle="modal" data-target="#toolboxpay">Version Completa: 4$</a> 
+                </div>
+              </div>
+
+          </div>     
+        </div>
+    </div>
+    <hr class="my-4">
+  </div>
+  </div>
+
+         <!-- Start Modal toolboxpay-->
+         <div class="modal fade" id="toolboxpay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Aviso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h2>Algunas temáticas de capacitación:</h2>
+                <ul>
+                  <li>Estrategias de abordaje psicopedagógico en el Aula</li>
+                  <li>Ejercicios de aprestamiento</li>
+                  <li>¿Cómo trabajar la Lecto escritura?</li>
+                  <li>Recursos Inclusivos en el Aula: Educ. Inicial, Educ. Básica y Educ. Media diversificada.</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Modal toolboxpay-->
+  <!-- End Section 6 -->
+
+
 <!-- Start Section7 Contactame -->
 <section class="offset site-section bg-ligth" id="contactame" data-aos="fade">
-  <div class="container">
+  <div class="container" id="contactame">
     <div class="row mb-5">
       <div class="col-12 text-center">
-        <h2 class="section-title mb-3">Contactame</h2>
-        <div class="heading-underline"></div> 
+        <h1 class="section-title mb-3">Contáctame</h1>
       </div>
     </div>
     <div class="row mb-5">
@@ -454,19 +547,19 @@
       <div class="col-md-4 text-center">
         <p class="mb-4">
           <span class="icon-room d-block h4 text-primary"></span>
-          <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+          <span>Fundación Ciami en la Urb. Oropeza Castillo. Puerto la Cruz. Anzoátegui</span>
         </p>
       </div>
       <div class="col-md-4 text-center">
         <p class="mb-4">
           <span class="icon-phone d-block h4 text-primary"></span>
-          <a href="#">+1 232 3235 324</a>
+          <a href="#">+58 424 822 29 26</a>
         </p>
       </div>
       <div class="col-md-4 text-center">
         <p class="mb-0">
           <span class="icon-mail_outline d-block h4 text-primary"></span>
-          <a href="#">youremail@domain.com</a>
+          <a href="#">psicopedagogiaintegral.cenia@gmail.com</a>
         </p>
       </div>
     </div>
@@ -520,12 +613,60 @@
     </div>
   </div>
 </section>
+
+</div>
 <!-- End Section7 Contactame -->
 
 <!--- Footer -->
 <!--- Footer -->
 <footer>
-	<div class="container-fluid text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-5">
+            <h2 class="footer-heading mb-4">Para Reflexionar:</h2>
+            <p>"Las diferencias individuales, nos enriquecen, son la regla y no la excepción".</p>
+          </div>
+          <div class="col-md-3 ml-auto">
+            <h2 class="footer-heading mb-4">Atajos</h2>
+            <ul class="list-unstyled">
+              <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+              <li><a href="#services-section" class="smoothscroll">Services</a></li>
+              <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+              <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Siguenos</h2>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h2 class="footer-heading mb-4">Horarios</h2>
+        <p>Monday 9am - 5pm</p>
+        <p>Saturday 10am - 4pm</p>
+        <p>Monday 9am - 5pm</p>
+				<p>Saturday 10am - 4pm</p>
+      </div>
+
+    </div>
+    <div class="row pt-5 mt-5 text-center">
+      <div class="col-md-12">
+        <div class="border-top pt-5">
+          <p>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy All rights reserved | Psicopedagogia Integral
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+    
+        </div>
+      </div>
+      
+    </div>
+  </div>
+	<!-- <div class="container-fluid text-center">
 		<div class="row text-center">
 			<div class="col-md-4">
 				<img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg">
@@ -557,10 +698,20 @@
       
     </div>
     <hr class="socket">
-    &copy; Davijhon Theme.
+    &copy; Davijhon Theme. -->
 	<!-- </div> -->
 </footer>
 <!--- Footer -->
 {% endblock content %}
+
+{% block extra_javascript  %}
+<script>
+  AOS.init({
+    duration: 1000,
+    offset: 120,
+    easing: 'ease-in-out'
+  })
+</script>
+{% endblock extra_javascript  %}
 
 

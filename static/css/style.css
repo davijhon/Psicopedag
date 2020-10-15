@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 
 html, body {
@@ -7,8 +9,21 @@ html, body {
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
     /* font-family: 'Lato', sans-serif; */
-    font-family: 'Baloo Tamma 2', cursive;
+    /* font-family: 'Baloo Tamma 2', cursive; */
+    /* font-family: 'Galindo', cursive; */
+    font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+  font-family: 'Galindo', cursive;
+}
+h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
 
 .offset:before {
   display: block;
@@ -42,6 +57,31 @@ html, body {
   margin-top: 8rem;
 }
 
+#conocemenav {
+  font-weight: bold;
+  color: #1f18e6;
+  
+}
+#apoyonav {
+  font-weight: bold;
+  color: #ffb11f;
+}
+#evaluacionnav {
+  font-weight: bold;
+  color: #ff1f1f;
+}
+#terapiasnav {
+  font-weight: bold;
+  color: #ffef11;
+}
+#charlasnav {
+  font-weight: bold;
+  color: #1ed336;
+}
+#toolboxnav {
+  font-weight: bold;
+  color: #1f18e6;
+}
 /*--- End Search Bar --*/
 
 /*--- Start Carousel ---*/
@@ -80,6 +120,14 @@ html, body {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
+.btn-outline-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+/* .btn:hover {
+  color: #fffb00;
+  text-decoration: none;
+} */
 /*--- End Carousel ---*/
 
 
@@ -94,12 +142,17 @@ html, body {
 
 /*--- Start Section 1  Conoceme ---*/
 .conoceme img {
+  position: relative;
   width: 23rem;
   border-radius: 40%;
   height: 29rem;
 }
 .conoceme h1{
-  font-size: 2.8rem;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  color: #1f18e6;
 
 }
 .conoceme h4{
@@ -117,6 +170,7 @@ html, body {
   text-align: left;
 }
 .valores {
+    margin-top: 80px;
     padding: 1rem;
     margin: 0 auto;
 }
@@ -146,35 +200,40 @@ html, body {
 /*-- End Background Fixed Image */
 
 /*--- End Section 2 Apoyo ---*/
-.about .container {
+#apoyo {
+  margin-top: 80px;
+}
+
+
+.apoyo .container {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.about .content h2 {
+.apoyo .content h1 {
   font-weight: 700;
   font-size: 44px;
   line-height: 50px;
   margin-bottom: 20px;
-  color: #1f18e6;
+  color: #ffb11f;
 }
 
-.about .content h3 {
+.apoyo .content h2 {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
 }
 
-.about .content ul {
+.apoyo .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.apoyo .content ul li {
   padding: 10px 0 0 28px;
   position: relative;
 }
 
-.about .content ul i {
+.apoyo .content ul i {
   left: 0;
   top: 7px;
   position: absolute;
@@ -182,13 +241,16 @@ html, body {
   color: #5a5af3;
 }
 
-.about .content p:last-child {
+.apoyo .content p:last-child {
   margin-bottom: 0;
 }
 .png img{
   height: 26rem;
   width: 30rem;
   position: relative;
+}
+.apoyocontent2 p {
+  margin-top: 80px;
 }
 
 /*--- End Section 2 Apoyo ---*/
@@ -202,13 +264,13 @@ html, body {
   margin-bottom: 2rem;
 }
 
-
-h3.heading {
-  font-size: 1.6rem;
+/* h1.heading {
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
+  font-size: 44px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  color: #1f18e6;
+} */
 .dark {
   /* background-color: rgba(0, 0, 0, 0.75); */
   color: rgb(255, 255, 255);
@@ -226,15 +288,18 @@ h3.heading {
 
 
 /*----- Start Section 3 Evaluacion -----*/
+
 #services {
   background: #f4f5f8;
-  padding-top: 30px;
+  padding-top: 80px;
   padding-bottom: 60px;
 }
-.services-title {
+.services-title h1{
   text-align: center;
-  font-size: 40px;
+  font-size: 44px;
+  line-height: 50px;
   font-weight: 700;
+  color:#ff1f1f;
 }
 .services-title p {
   font-size: 1rem;
@@ -254,6 +319,8 @@ h3.heading {
   border-radius: 8px;
   box-shadow: 0 15px 30px rgba(102, 113, 228, 0.13);
   text-align: center;
+  width: 350px;
+  height: 306px;
 }
 .services-icon {
   font-size: 30px;
@@ -329,6 +396,7 @@ h3.heading {
   padding-left: 10px;
   padding-right: 10px;
   color: #748182;
+  margin-bottom: 37px;
 }
 .services-selection:hover .motricidad-icon {
   color: #fff;
@@ -373,23 +441,111 @@ h3.heading {
 } 
 .subcontenido-2 p {
 }
+.subcontenido3 {
+  margin-bottom: 45px;
+}
 .col-12 {
   padding: 0px;
+}
+.description ul li {
+  margin-bottom: 25px;
+}
+.subcontenido3 .content2 p {
+  text-align: center;
+}
+#cognitiva {
+  margin-bottom: 58px;
+}
+#habilidades {
+  margin-bottom: 79px;
+}
+#logico {
+  margin-bottom: 79px;
+}
+.fa {
+  color: #5a5af3;
 }
 /*----- End Section 3 Evaluacion -----*/
 
 /* ---------------- Start Section 4 Terapias -----------*/
+#terapias {
+  margin-top: 80px;
+}
 .terapias-title h2 {
   text-align: right;
 }
+.terapias .container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.terapias .content h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  color: #ffef11;
+}
 
+.terapias .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.terapias .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.terapias .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.terapias .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #5a5af3;
+}
+
+.terapias .content p:last-child {
+  margin-bottom: 0;
+}
+.png img{
+  height: 26rem;
+  width: 30rem;
+  position: relative;
+}
 /*---------------- End Section 3  Terapias -------------*/
 
 
 /*-- Start Background fixed-charlas Image */
 #charlas {
   background: #f2f2f2;
-  padding-top: 80px;
+  box-shadow: 0 8px 8px -2px gray;
+}
+.charlas h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  color: #1ed336;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  height: 314px;
+}
+#btnmotivaconales {
+  margin-top: 56px;
+}
+#btnespecializados {
+  margin-top: 56px;
 }
 .inner {
   overflow: hidden;
@@ -409,16 +565,96 @@ h3.heading {
 .inner:hover img{
   transform: scale(1.5);
 }
+.certificaciones {
+  margin-top: 80px;
+}
+.certificaciones .modalidad-presencial h2{
+  text-align: right;
+}
 .certificaciones h3{
   margin-top: 5rem;
 }
 /*-- End Background fixed-charlas Image */ 
 
+/*--- Start Section 6  ToolBox ---*/
+.toolbox img {
+  position: relative;
+  width: 600px;
+  /* border-radius: 40%; */
+  height: 500px;
+  box-shadow: 1px 1px 5px rgba(168, 168, 168, 0.719);
+  right: 65px;
+}
+.toolbox h1{
+  font-weight: 700;
+  font-size: 44px;
+  margin-top: 20px;
+  color: #1f18e6;
+
+}
+.toolbox h4{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.toolbox h3{
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.toolbox ul{
+  font-size: 1rem;
+  text-align: left;
+}
+/* .toolbox {
+    padding: 1rem;
+    margin: 0 auto;
+} */
+.toolbox {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.toolboxcontent {
+  left: 40px;
+}
+/* .heading h3 {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+} */
+.toolbox p {
+  text-align: justify;
+  margin-block-start: 20px;
+  text-indent: 1.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.downloadfree {
+  width: 176px;
+  height: 54px;
+}
+.downloadpay {
+  width: 176px;
+  height: 54px;
+}
+/*--- End Section 6 ToolBox---*/
+
+
+
+
+/*-- Estar Background Contactame */ 
+#contactame {
+  background: white;
+  /* margin: 0; */
+}
+
+/*-- End Background Contactame*/ 
+
 /*  footer */
 footer {
-  background-color: #4fa328;
+  background-color: #1f6100;
   color: #d5d5d5;
   padding-top: 2rem;
+  height: 539px;
 
 }
 footer img {
@@ -469,7 +705,34 @@ hr.socket {
   .pricing .card:hover .btn {
     opacity: 1;
   }
+  
 }
+@media (max-width: 665px) {
+  .cards {
+    width: 100%;
+    display: block;
+    margin-bottom: 32px;
+    margin-left: 60px;
+    padding: 30px;
+  }
+ .toolbox img{
+  /* width: 100%; */
+  display: block;
+  margin-bottom: 32px;
+  height: 560px;
+  width: 460px;
+  right: 80px;
+  left: -65;
+  margin-left: 30px;
+}
+.toolboxcontent {
+  width: 60%;
+  left: -65;
+} 
+}
+
+
+
 
 /*--- End Pricing List ---*/
 
@@ -479,4 +742,125 @@ hr.socket {
 }
 /*-- End Customuser detail --*/
 
+/* custom font from google fonts */
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700); */
 
+/* Basic styling and positioning of elements */
+/* body {color:#444;font-size:16px;} */
+/* #some-box {background:#fff;padding:40px 0px 80px;font-family:'Open Sans', sans-serif;} */
+#some-box {
+  margin-top: 45px;
+}
+#some-box h1 {
+  text-align:center;
+}
+#some-box h3 {
+  font-size:26px;
+}
+#some-box a {
+  color:#70BCB8;
+  text-decoration:none;
+  display:block;
+  font-weight:bold;
+}
+#some-box a:hover {color:#8E7BB2;}
+
+article.row {
+  width:100%;
+  max-width:800px;
+  margin:0 auto;
+  padding:45px 0;
+}
+article.row div {
+  width:49.4%;
+  display:inline-block;
+  position:relative;
+  /* border:1px solid white; */
+}
+
+/**** For your reference ****/
+/* article.row {border:1px solid white;}
+article.row:hover {border:1px solid yellow;}
+article.row div:hover {border:1px solid green;} */
+/* Your divs won't expand to contain absolute positioned images */
+
+
+#idea-one img, #idea-two img, #idea-three img {
+  height: 187px;
+  /* position:absolute; */
+  bottom:-20px;
+  left:50px;
+  width: 360px;
+  height: 400px;
+}
+
+/* Here's the column repositioning magic. This media query says "Apply these styles only until page width is greater than 750px" 
+
+***To make this work, your media query has to be beneath your other styles to keep it from being overwritten later on by your general styles*** */
+@media(max-width:750px){
+  /* ------- Terapias Section -------*/
+  #terapias{
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+    -webkit-box-orient:vertical;
+    -moz-box-orient:vertical;
+    box-orient:vertical;
+  }
+  
+  /* This tells the browswer to draw the first box (div:first-of-type) within our stacked content block (identified in the previous rule) in the second position ([...]box-ordinal-group:2;)
+  This gives us a nice arrangement of alternating text and images, and allows us two have a custom layout for smaller or wider screens.*/
+	#terapias div:first-of-type {
+    -webkit-box-ordinal-group:2;
+    -moz-box-ordinal-group:2;
+    box-ordinal-group:2;
+  }
+ /* ------- Terapias Section *-------/
+
+
+  /* This resizes the divs that contain your content to fill the width of the page so that they stack vertically */
+  article.row div {
+    min-width:300px;
+    width:90%;
+    margin:0 5%;
+    text-align:center;
+    display:block;
+  }
+  
+  /* Center your text */
+	#some-other-box h3 {
+    text-align:center;
+  }
+
+  /* Center your image */
+  #idea-one img, 
+  #idea-two img,
+  #idea-three img {
+    position:relative;
+    margin:auto;
+    left:inherit;
+    bottom:inherit;
+  }
+
+  /* This tells the browswer to stack the content vertically */
+  #idea-two {
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+    -webkit-box-orient:vertical;
+    -moz-box-orient:vertical;
+    box-orient:vertical;
+  }
+  
+  /* This tells the browswer to draw the first box (div:first-of-type) within our stacked content block (identified in the previous rule) in the second position ([...]box-ordinal-group:2;)
+  This gives us a nice arrangement of alternating text and images, and allows us two have a custom layout for smaller or wider screens.*/
+	#idea-two div:first-of-type {
+    -webkit-box-ordinal-group:2;
+    -moz-box-ordinal-group:2;
+    box-ordinal-group:2;
+  }
+}
+
+  /*
+If we had 3 boxes, we could draw them in order C, A, B by writing div:first-of-type{[...]group:2;} and div:nth-of-type(2) {[...]group:3;}, and so on.
+  */
