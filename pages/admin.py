@@ -4,7 +4,8 @@ from .models import (
     Contacto, 
     Suscriptor, 
     Web,
-    RedesSociales
+    RedesSociales,
+    FreePdf
 )
 
 class HeaderAdmin(admin.ModelAdmin):
@@ -31,10 +32,15 @@ class WebAdmin(admin.ModelAdmin):
 class RedesSocialesAdmin(admin.ModelAdmin):
     list_display = ('facebook','twitter','instagram','estado','fecha_creacion')
     search_fields = ['facebook']
-    
+
+
+class PdfFileAdmin(admin.ModelAdmin):
+    list_display = ('name', 'created', 'updated')
+
 
 admin.site.register(Header, HeaderAdmin)
 admin.site.register(Contacto, ContactoAdmin)
 admin.site.register(Web, WebAdmin)
 admin.site.register(RedesSociales, RedesSocialesAdmin)
 admin.site.register(Suscriptor, SuscriptorAdmin)
+admin.site.register(FreePdf, PdfFileAdmin)

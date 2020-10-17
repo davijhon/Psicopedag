@@ -1,3 +1,6 @@
+import os
+from django.http import HttpResponse, Http404
+# from wsgiref.util import FileWrapper
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -10,7 +13,8 @@ from django.views.generic import TemplateView, ListView, View
 from .models import ( 
     Header, 
     Contacto,
-	Suscriptor
+	Suscriptor,
+	FreePdf
 )
 from .forms import ContactoForm
 
@@ -29,6 +33,21 @@ def sending_email(nombre, correo, asunto, mensaje):
 	to = settings.DEFAULT_FROM_EMAIL
 
 	send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+
+
+def download_free_pdf(request, slug):
+	# This function download the document in media static file.
+	pdf = FreePdf.objects.get(slug=slug)
+	pdf_path = pdf.file.path
+	file_path = os.path.join(settings.MEDIA_ROOT, pdf_path)
+	if os.path.exists(file_path):
+		with open(file_path, 'rb') as fh:
+			response = HttpResponse(fh.read(), content_type="application/pdf")
+			response['Content-Length'] = os.path.getsize(file_path)
+			response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+			return response
+	raise Http404
+
 
 
 def error_400(request, exception):
@@ -52,12 +71,17 @@ class HomeView(View):
 	def get(self, request, *args, **kwargs):
 		form = ContactoForm()
 		# contact = Web.objects.filter(estado=True).latest('fecha_creacion')
+		file = FreePdf.objects.order_by('created')[0]
 		headers = list(Header.objects.filter(status=True).order_by('position')[:3])
+
+		# reCAPTCHA settings key
+		# GOOGLE_RECAPTCHA_SECRET_KEY = settings.GOOGLE_RECAPTCHA_SECRET_KEY
 
 		ctx = {
 			'carousel_image1': headers[0],
 			'carousel_image2': headers[1],
 			'carousel_image3': headers[2],
+			'file': file,
 			'form': form
 		}
 		return render(request, 'pages/index.html', ctx)
@@ -72,6 +96,19 @@ class HomeView(View):
 				asunto = form.cleaned_data.get('asunto')
 				mensaje = form.cleaned_data.get('mensaje')
 
+				#''' Begin reCAPTCHA validation '''
+				# recaptcha_response = request.POST.get('g-recaptcha-response')
+				# url = 'https://www.google.com/recaptcha/api/siteverify'
+				# values = {
+				# 	'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+				# 	'response': recaptcha_response
+				# }
+				# data = urllib.parse.urlencode(values).encode()
+				# req =  urllib.request.Request(url, data=data)
+				# response = urllib.request.urlopen(req)
+				# result = json.loads(response.read().decode())
+				#''' End reCAPTCHA validation '''
+
 				contact = Contacto(
 					nombre=nombre,
 					correo=correo,
@@ -81,6 +118,10 @@ class HomeView(View):
 				contact.save()
 				sending_email(nombre, correo, asunto, mensaje)
 			messages.success(self.request, "Tu mensaje fue enviado exitosamente!")
+			# if result['success']:
+            # 	messages.success(self.request, "Tu mensaje fue enviado exitosamente!")
+            # else:
+            # 	messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 			return redirect("/")
 		except ObjectDoesNotExist:
 			messages.error(self.request, "Lo sentimos. Algo ha ocurrido al momento de enviar el mensaje. Intenta nuevamente")

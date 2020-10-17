@@ -462,8 +462,11 @@ h2, h3, h4 {
 #logico {
   margin-bottom: 79px;
 }
-.fa {
+.fa-check{
   color: #5a5af3;
+}
+.fa-whatsapp {
+  color: white;
 }
 /*----- End Section 3 Evaluacion -----*/
 
@@ -646,8 +649,40 @@ h2, h3, h4 {
   background: white;
   /* margin: 0; */
 }
+.contactametitle {
+  margin-top: 80px;
+}
 
 /*-- End Background Contactame*/ 
+
+/*--- Button Whatsapp--*/
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+  color: #25d366;
+  transform: scale(1.1);
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+/*-- Button Whatsapp --*/
+
 
 /*  footer */
 footer {

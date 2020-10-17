@@ -84,3 +84,17 @@ class RedesSociales(ModelBlogBase):
 
 	def __str__(self):
 		return self.facebook
+
+
+class FreePdf(models.Model):
+	name = models.CharField(max_length=100, unique=True)
+	slug = models.SlugField(unique=True)
+	file = models.FileField(upload_to='pdf')
+	created = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now=True)
+
+	class Meta:
+		ordering = ['created']
+
+	def __str__(self):
+		return self.name
