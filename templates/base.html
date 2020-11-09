@@ -3,25 +3,28 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <title>Psicopedagogia Integral</title>
-    <meta charset="utf-8">
-    <meta name="description" content="#">
-  <meta name="keywords" content="#">
-  <meta name="author" content="#">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Lcda. Sandra Navas  ofrece Servicios de Evaluación y Atención Psicopedagógica, Apoyo a Padres de familia y Acompañamiento docente | Padres y docentes unidos por una educación que respeta las diferencias.">
+    <meta name="keywords" content="Psicopedagogía, Inclusión educativa, Educación Especial">
+    <meta name="author" content="davenavas">
+    <title>Psicopedagogia Integral - Lcda.Sandra Navas</title>
+    <link rel="icon" href="{% static 'css/img/logo.png' %}" type="image/x-icon">
     <!-- Bootstrap CSS -->
+    <!-- <script src="https://use.fontawesome.com/3357dc7b02.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
     {% block extra_head %}
 	  {% endblock extra_head %}
   </head>
 
 
-  {% include "pages/navbar.html" %}
+  {% include "pages/navbar.html" %} 
 
   <div class="message mt-5">
     {% if messages %}
@@ -37,11 +40,8 @@
    </div>
 
 <body>
-  <!-- <a href="https://api.whatsapp.com/send?phone=584248222926&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-    <!-- <i class="fa fa-whatsapp my-float"></i> 
-  </a> -->
   <a href="https://api.whatsapp.com/send?phone=584248222926&text=Hola, quisiera saber mas sobre sus servicios!" class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
+    <i class="fab fa-whatsapp my-float"></i>
   </a>
 
     {% block content %}
@@ -51,15 +51,19 @@
     {% block javascript %}
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <!-- <link rel="stylesheet" href="{% static 'css/js/project.js' %}"> -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script> -->
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-grid.min.css" integrity="sha512-pkOzvsY+X67Lfs6Yr/dbx+utt/C90MITnkwx8X5fyKkBorWHJLlR3TmgNJs83URAR0GdejZZnjZdgYjzL/mtcQ==" crossorigin="anonymous" /> -->
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
+      <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
-      <script src="https://use.fontawesome.com/c7e496b834.js"></script>
-    {% endblock javascript %}
+      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+      <!-- Bootstrap JS -->
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <!-- Popper JS -->
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <!-- Font Awesome -->
+      <script src="{% static 'js/all.min.js' %}"></script>
+    
+      {% endblock javascript %}
 
     {% block extra_javascript %}{% endblock extra_javascript %}
 </body>

@@ -16,7 +16,7 @@
           <div class="carousel-caption d-none d-md-block">
             <h1>{{ carousel_image1.caption_title }}</h1>
             <h3>{{ carousel_image1.caption_content }}</h3>
-            <a href="#evaluacion"><button type="button" class="btn btn-outline-warning btn-lg" >Bienvenidos</button></a>
+            <a href="#conoceme"><button type="button" class="btn btn-outline-warning btn-lg" >Saber más</button></a>
           </div>
         {% endif %}
       </div>
@@ -31,48 +31,33 @@
 
 <!-- Start Section 1 - Conoceme -->
 <div id="conoceme" class="offset">
-<div class="container-fluid">
+<div class="container">
     
   <div class="row valores padding">
 
     <div class="col-12 text-center conoceme">
 			<h1>Conóceme</h1>
-			<!-- <div class="heading-underline"></div> -->
     </div>
     
       <div class="row conoceme">
-        <div class="col-md-4">
-          <img src="{% static 'css/img/fotoperfil.jpeg' %}" data-aos="fade-right">
+        <div class="col-md-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <img src="{% static 'css/img/fotoperfil.jpeg' %}" alt="Sandra Navas foto de perfil">
         </div>
         <div class="col-md-8 conoceme text-center">
           <h2>Lcda. Sandra Navas</h2>
-          <h2>Educación Especial mención discapacidad cognitiva</h2>
-          <p>Diplomada en Neuropsicopedagogía y problemas de aprendizaje en el 
-            Instituto de Neurociencias Aplicadas- Colombia, Inclusión Educativa 
-            Politécnico Superior de Colombia, Trastorno del Espectro Autista en 
-            Red para Crecer y Universidad de los Andes- Venezuela.</p>
-          <p>Profesional con experiencia en el modelo neuropsicopedagógico, con 
-            abordaje e intervención a población con Discapacidad Cognitiva, Motora, 
-            Sensorial, TEA, TDAH bajo los principios de la Educación Inclusiva. 
-            Mi propuesta está basada en generar planes de intervención y apoyo al colegio 
-            con ajustes razonables y flexibilización curricular, así como acompañamiento 
-            al entorno familiar.</p>
-            <div class="row conoceme">
-              <div class="col-md-6" data-aos="fade-up">
-                <h4>Ámbito de trabajo:</h4>
-                <ul>
-                  <li>Terapéutico a los educandos y sus familias</li>
-                  <li>Escolar directo en aula</li>
-                  <li>Acompañamiento docente</li>
-                  <li>Talleres de formación</li>
-                </ul>
-              </div>
-              <div class="col-md-6" data-aos="fade-up">
-                <h4>Modalidades:</h4>
-                <ul>
-                  <li>Presencial</li>
-                  <li>Online</li>
-                </ul>
+          <h2>Educación Especial, mención Discapacidad Cognitiva – UJMV</h2>
+          <p>{{ conoceme.content1 }}</p>
+          <p>{{ conoceme.content2 }}</p>
+            <div class="row conoceme-content">
+              <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+                <p>Diplomados:</p>
+                  <ul class="fa-ul">
+                    {% with caracteristicas=conoceme.caracteristica.all %}
+                      {% for caracteristica in caracteristicas %}
+                        <li><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</li>
+                      {% endfor %}
+                    {% endwith %}
+                  </ul>
               </div>
             </div>
         </div>     
@@ -93,29 +78,31 @@
     <section id="apoyo" class="apoyo">
       <div class="container">
         <div class="row content">
-          <div class="col-lg-6" data-aos="fade-down">
+          <div class="col-lg-6">
             <h1>Apoyo Psicopedagógico para padres</h1>
-           <p> Se identifica tu saber de padre y las necesidades que se derivan del 
-              apoyo en el aprendizaje escolar tu hij@ en casa. </p>
+           <p>{{ apoyo.content1 }}</p>
               <div class="row">
                 <div class="col-lg-6 png" data-aos="fade-right">
-                  <img src="{% static 'css/img/apoyoparapadres.png' %}"  alt="">
+                  <img src="{% static 'css/img/apoyopadres.png' %}"  alt="Apoyo psicopedagogico para padres">
                 </div>
-            </div>
+              </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-left">
+          <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-up">
             <h2>
-              Entrevista inicial con Padres: 
+              Encuentros con Madres y Padres: 
             </h2>
-            <ul>
-              <li><i class="fa fa-check"></i> Se indagan específicamente las necesidades, situaciones, conductas que surgen al momento de realizar tareas. Tanto de tu hij@ como de tí.</li>
-              <li><i class="fa fa-check"></i> Se ofrecen herramientas prácticas para que las apliques al momento de trabajar con tu hij@, durante la sesión se hacen los ejercicios reales para que evidencies el hacer.</li>
-              <li><i class="fa fa-check"></i> Acompañamientos vía WhatsApp a través de mensajes y notas de voz como guía a su proceso.</li>
+            <ul class="fa-ul">
+              {% with caracteristicas=apoyo.caracteristica.all %}
+                {% for caracteristica in caracteristicas %}
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</li>
+                {% endfor %}
+              {% endwith %}
             </ul>
             <p class="font-italic">
-              La idea es conocer todo el contexto alrededor 
-              de tu hijo y de ti, lo más detallado posible 
-              para orientarte.
+              «Mi padre me hizo el mejor regalo que se puede hacer a un hijo. Creyó en mí.» 
+            </p>
+            <p class="font-italic text-right author">
+              JIM VALVANO 
             </p>
           </div>
         </div>
@@ -126,48 +113,49 @@
 
 <!-- Start Section 3 Evaluacion -->
 <div id="evaluacion" class="offset">
-<div class="col-12 colevaluacion">
+<div class="col-12 colevaluacion px-0">
   <section id="services">
     <div class="container">
       <div class="services-title">
-       <h1>Evaluacion Psicopedagogica</h1>
+       <h1>Evaluación Psicopedagógica</h1>
         <p>Valoración de las dimensiones del desarrollo humano:</p>
       </div>
 
       <div class="services-detail">
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="motricidad-icon">
-                <i class="fas fa-child"></i>
+                <i class="fa fa-child"></i>
               </div>
               <div class="services-description">
                 <h2>Motricidad Gruesa y Fina</h2>
                 <p>
-                  La base del aprendizaje se inicia en el control y dominio del propio cuerpo. Implica la coordinación de movimientos amplios.
+                  La base del aprendizaje se inicia en el control y dominio del propio cuerpo. Implica la coordinación de movimientos amplios y finos.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="cognitiva-icon">
-                <i class="fas fa-brain"></i>
+                <i class="fa fa-brain"></i>
               </div>
               <div class="services-description">
                 <h2>Cognitiva</h2>
                 <p id="cognitiva">
-                  Estimular capacidades de percepción, comprensión, memorización, análisis, razonamiento, atención. 
+                  Procesos mentales de atención, memoria, comprensión, análisis, razonamiento, 
+                  funciones ejecutivas, presentes en cualquier actividad. 
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="lenguaje-icon">
-                <i class="fad fa-lips"></i>
+                <i class="far fa-comments"></i>
               </div>
               <div class="services-description">
                 <h2>Lenguaje Expresivo-Comprensivo</h2>
@@ -178,10 +166,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="socioemocional-icon">
-                <i class="far fa-smile-beam"></i>
+                <i class="fa fa-smile-beam"></i>
               </div>
               <div class="services-description">
                 <h2>Socioemocional</h2>
@@ -192,10 +180,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="lecto-icon">
-                <i class="fas fa-book-reader"></i>
+                <i class="fa fa-book-reader"></i>
               </div>
               <div class="services-description">
                 <h2>Habilidades Lecto-Escritas</h2>
@@ -206,10 +194,10 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-4 col-md-6" data-aos="flip-down">
             <div class="services-selection">
               <div class="logico-icon">
-                <i class="fas fa-calculator-alt"></i>
+                <i class="fas fa-calculator"></i>
               </div>
               <div class="services-description">
                 <h2>Lógico Matemáticas</h2>
@@ -230,29 +218,22 @@
           <div class="row">
             <div class="col-lg-12 subcontenido3">
               <div class="content2">
-                <p class="font-italic">Se emplea batería de evaluación psicopedagógica integral 
-                  acorde a la edad y grado (se toma en cuenta 
-                  consideraciones de flexibilidad).
+                <p class="font-italic">Se emplea batería de evaluación psicopedagógica integral acorde a la edad y grado (se toma en cuenta consideraciones de flexibilidad).
                 </p>
               </div>
             </div>
 
           
-          <div class="row" data-aos="fade-up"
-          data-aos-duration="3000">
-            <div class="col-12 description">
-              <ul style="list-style-type:none">
-                  <li><h4><i class="fa fa-check"></i> (1) Sesión únicamente con padres: entrevista formal para llenado de anamnesis.</h4></li>
-                  <li><h4><i class="fa fa-check"></i> (4) Sesiones de Evaluación directa con el Educando.</h4></li>
-                  <li><h4><i class="fa fa-check"></i> De ser necesario, se anexan (2) sesiones extras para aplicar Test Perceptivo Visual Frostig, es sugerido a los padres en caso de evidenciar necesidades en este aspecto y necesarias para orientar de forma concreta.</h4></li>                
-                  <li><h4><i class="fa fa-check"></i> Se identifican y describen las dimensiones del desarrollo humano.</h4></li>
-                  <li><h4><i class="fa fa-check"></i> Se emite presunción diagnóstica, observaciones y recomendaciones.</h4></li>
-                  <li><h4><i class="fa fa-check"></i> Se recomiendan apoyos psicopedagógicos, terapéuticos y orientación a padres de familia.</h4></li>
+            <div class="col-12 description" data-aos="fade-up" data-aos-duration="3000">
+              <ul style="list-style-type:none" class="fa-ul">
+                {% with caracteristicas=evaluacion.caracteristica.all %}
+                  {% for caracteristica in caracteristicas %}
+                    <li><p><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</p></li>
+                  {% endfor %}
+                {% endwith %}
               </ul>
             </div>
           </div>
-
-        </div>
 
       </div>
     </div>
@@ -266,36 +247,33 @@
   <section id="terapias" class="terapias">
     <div class="container">
       <div class="row content">
-        <div class="col-lg-6" data-aos="fade-down">
+        <div class="col-lg-6">
           <h1>Atención Psicopedagógica</h1>
-         <p> En este proceso se solicita apoyo de los padres de 
-          familia, de los docentes y el resto del equipo terapeútico. </p>
+         <p>{{ terapias.content1 }}</p>
             <div class="row">
               <div class="col-lg-6 png" data-aos="fade-right">
-                <img src="{% static 'css/img/terapiaspng.png' %}"  alt="">
+                <img src="{% static 'css/img/terapiaspng.png' %}"  alt="Terapias y atencion psicopedagogica">
               </div>
           </div>
         </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-left">
-          <ul>
-            <li><i class="fa fa-check"></i> Intervención terapéutica con fines y alcances, 
-              que respondan a las particularidades del desarrollo 
-              evolutivo del estudiante.</li>
-            <li><i class="fa fa-check"></i> Se respetan las características individuales, 
-              gustos, intereses y ritmos aprendizaje.</li>
-            <li><i class="fa fa-check"></i> Desde una visión neurodidáctica se hace uso de recursos y 
-              herramientas lúdico -didácticas, autocorrectivos, se emplean 
-              actividades transicionales, autorregulativas, entrenamiento 
-              cognitivo-conductual y se toman en cuenta los canales de aprendizaje.</li>
-            <li><i class="fa fa-check"></i> Se apuesta a la Inclusión. Interdependencia. Independencia.</li>
-            <li><i class="fa fa-check"></i> Se realiza debido seguimiento, revisión de objetivos y alta del servicio.</li>
+        <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-up">
+          <ul class="fa-ul">
+            {% with caracteristicas=terapias.caracteristica.all %}
+              {% for caracteristica in caracteristicas %}
+                <li><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</li>
+              {% endfor %}
+            {% endwith %}
           </ul>
+          <p class="font-italic">
+            «Lo que uno ama en la infancia se queda en el corazón para siempre.» 
+          </p>
+          <p class="font-italic text-right author">
+            Jean Jacques Rousseau 
+          </p>
 
         </div>
       </div>
     </div>
-  </section>
-
   </section>
 </div>
 <!-- End Section 4 TERAPIAS -->
@@ -312,9 +290,9 @@
   <div class="row justify-content-center">
 
     <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
-      <div class="card shadow" style="width: 18rem;">
+      <div class="card shadow">
         <div class="inner">
-          <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Card image cap">
+          <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Charlas Motivacionales">
         </div> 
         <div class="card-body">
           <h2 class="card-title text-center">Motivacionales</h2>
@@ -337,10 +315,11 @@
           <div class="modal-body">
             <h2>Algunas temáticas de capacitación:</h2>
             <ul>
-              <li>Estrategia maestros en apoyos de maestros</li>
-              <li>Educacion conciente</li>
-              <li>Comunicacion efectiva en la educacion</li>
-              <li>Sens ibilización a la Comunidad Educativa sobre Autismo</li>
+              {% with caracteristicas=motivacionales.caracteristica.all %}
+                {% for caracteristica in caracteristicas %}
+                  <li>{{ caracteristica }}</li>
+                {% endfor %}
+              {% endwith %}
             </ul>
           </div>
           <div class="modal-footer">
@@ -352,9 +331,9 @@
     <!-- End Modal Motivacionales-->
 
     <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
-      <div class="card shadow" style="width: 18rem;">
+      <div class="card shadow">
         <div class="inner">
-          <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Card image cap">
+          <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Charlas Pedagógico-didácticos">
         </div>
         <div class="card-body">
           <h2 class="card-title text-center">Pedagógico-didácticos</h2>
@@ -377,10 +356,11 @@
             <div class="modal-body">
               <h2>Algunas temáticas de capacitación:</h2>
               <ul>
-                <li>Estrategias de abordaje psicopedagógico en el Aula</li>
-                <li>Ejercicios de aprestamiento</li>
-                <li>¿Cómo trabajar la Lecto escritura?</li>
-                <li>Recursos Inclusivos en el Aula: Educ. Inicial, Educ. Básica y Educ. Media diversificada.</li>
+                {% with caracteristicas=pedagogico_didactico.caracteristica.all %}
+                  {% for caracteristica in caracteristicas %}
+                    <li>{{ caracteristica }}</li>
+                  {% endfor %}
+                {% endwith %}
               </ul>
             </div>
             <div class="modal-footer">
@@ -392,9 +372,9 @@
       <!-- End Modal Pedagógico-didácticos-->
 
       <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
-        <div class="card shadow" style="width: 18rem;">
+        <div class="card shadow">
           <div class="inner">
-            <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Card image cap">
+            <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Charlas especializacion psicopedagogica integral">
           </div>
           <div class="card-body">
             <h2 class="card-title text-center">Especializados</h2>
@@ -417,15 +397,11 @@
             <div class="modal-body">
               <h2>Algunas temáticas de capacitación:</h2>
               <ul>
-                <li>Transición de la Educación Especial a la Educación Inclusiva.</li>
-                <li>Buenas prácticas de Educación Inclusiva</li>
-                <li>Detección temprana de necesidades educativas en el aula</li>
-                <li>Rol del Tutor Educativo</li>
-                <li>Atención a los estilos de aprendizaje en el aula</li>
-                <li>Abordaje psicoeducativo de estudiantes con TEA</li>
-                <li>Rol Educativo de los Padres en el desarrollo Integral</li>
-                <li>Charla para padres de niños con Autismo</li>
-                <li>Abordaje del Acoso Escolar</li>
+                {% with caracteristicas=especializados.caracteristica.all %}
+                  {% for caracteristica in caracteristicas %}
+                    <li>{{ caracteristica }}</li>
+                  {% endfor %}
+                {% endwith %}
               </ul>
             </div>
             <div class="modal-footer">
@@ -439,31 +415,32 @@
       <div id="some-box">
         <!-- <h1>Section Heading</h1> -->
       
-        <article class="row" id="idea-one" data-aos="fade-left">
-          <div><img src="{% static 'css/img/apoyoparapadres.png' %}" /></div>
+        <article class="row" id="idea-one" data-aos="fade-up">
+          <div><img src="{% static 'css/img/presencial.png' %}" alt="Charlas Presencial Psicopedagogia" /></div>
           <div class="presencial">
             <h1>Modalidad Presencial</h1>
-            <ul>
-              <li>Espacio, cómodo, privado, apacible.</li>
-              <li> Un lugar donde los padres de familia puedan acercarse a solicitar información sobre las problemáticas que están presentando en sus centros educativos con sus hijos.</li>
-              <li>Acompañamiento docente.</li>
-              <li>Se brindará orientaciones, que pueden incluir prácticas directas en los centros educativos de acuerdo a la necesidad.</li>
-            </ul>
-            
+            <ul class="fa-ul">
+              {% with caracteristicas=modalidad_presencial.caracteristica.all %}
+                {% for caracteristica in caracteristicas %}
+                  <li><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</li>
+                {% endfor %}
+              {% endwith %}
+            </ul>     
           </div>
         </article>
       
-        <article class="row" id="idea-two" data-aos="fade-right">
+        <article class="row" id="idea-two" data-aos="fade-up">
           <div>
             <h1>Foro E-learning</h1>
-                <ul>
-                  <li>Espacios de aprendizaje dirigidos. </li>
-                  <li>Con pautas establecidas que se desarrollan en tiempo real de acuerdo a una temática específica.</li>
-                  <li>Los interactuantes pueden exponer sus inquietudes y estas pueden responderse bajo un sentido de asistencia virtual.</li>
-                  <li>Acompañadas de material digital como presentaciones, imágenes, videos, audios, escritos y material de apoyo a través de email.</li>
+                <ul class="fa-ul">
+                  {% with caracteristicas=e_learning.caracteristica.all %}
+                    {% for caracteristica in caracteristicas %}
+                      <li><span class="fa-li"><i class="fa fa-check"></i></span>{{ caracteristica }}</li>
+                    {% endfor %}
+                  {% endwith %}
                 </ul>
           </div>
-          <div><img src="{% static 'css/img/apoyoparapadres.png' %}"/></div>
+          <div><img src="{% static 'css/img/online.png' %}" alt="Charlas Online Psicopedagogia"/></div>
         </article>
 
   </div>
@@ -478,30 +455,82 @@
   <div class="container">
       
     <div class="row toolbox padding">
-        
-        <div class="row toolbox">
-          <div class="col-md-6">
-            <img src="{% static 'css/img/toolbox.jpeg' %}" data-aos="fade-right">
+
+      <div class="col-md-12 toolbox-description">
+        <h1>Caja de herramientas</h1>
+        <p>Este es uno de mis espacios favoritos, lo llamo Caja de herramientas (Toolbox), para hacer del aprendizaje 
+          una interacción satisfactoria buscaremos todo lo que esté a nuestro alcance para aumentar y favorecer las capacidades de los mas peques.</p>
+         <p>Aquí estaré compartiendo información, guías y recursos que puedes emplear en el acompañamiento en el hogar, en clases y a nivel terapéutico.</p>
+      </div>
+
+      <div class="row books">
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-8 book-portada">
+              <img src="{% static 'css/img/toolbox1.png' %}" class="w-100" alt="Herramienta Psicopedagogica en PDF">
+            </div>
+            <div class="col-md-4">
+              <p class="autor-text">Author: Dave</p>
+              <p>Paginas: 33</p>
+              <p>Formato: pdf</p>
+              <p class="autor-text">Publicado: 6-11-2020</p>
+              <p>Tamaño: MB</p>
+            </div>
           </div>
-          <div class="col-md-6 toolboxcontent text-center">
-            <h1>Caja de herramientas</h1>
-            <p>En esta oportunidad les comparto una guía de actividades para que la empleen en el acompañamiento en casa, así como en el abordaje docente o terapeútico respectivamente. Cuenta con actividades que responden a las habilidades en secuencia para lecto-escritura del 1er grado, van de lo simple a lo complejo, involucran consignas que favorecen los dispositivos básicos de aprendizaje, las funciones ejecutivas, los canales sensoriales, actividades transicionales y ejercicios socioemocionales.</p>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <a href="{% url 'pages:download' file.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
-                </div>
-                <div class="col-md-6">
-                  <a type="button" class="btn btn-success downloadpay" data-toggle="modal" data-target="#toolboxpay">Version Completa: 4$</a> 
-                </div>
-              </div>
-
-          </div>     
+          <div class="row">
+            <div class="col-md-12">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem odit, explicabo a sit dolorem voluptas ratione. Consectetur, libero porro dolor animi quo accusantium soluta quaerat provident, tempora illo eius.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <a href="{% url 'pages:download' file.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
+            </div>
+          </div>
         </div>
+
+        <div class="col-md-2">
+          <div class="vl"></div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-8 book-portada">
+              <img src="{% static 'css/img/toolbox2.png' %}" class="w-100" alt="Herramienta Psicopedagogica en PDF">
+            </div>
+            <div class="col-md-4">
+              <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
+              <p class="autor-text">Author: Sandra Navas</p>
+              <p>Paginas: 33</p>
+              <p>Formato: pdf</p>
+              <p class="autor-text">Publicado: 6-11-2020</p>
+              <p>Tamaño: MB</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem odit, explicabo a sit dolorem voluptas ratione. Consectetur, libero porro dolor animi quo accusantium soluta quaerat provident, tempora illo eius.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="{% url 'pages:download' file.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
+            </div>
+            <div class="col-md-6">
+              <a type="button" class="btn btn-success downloadpay" data-toggle="modal" data-target="#toolboxpay">Version Completa: 5$</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+        
     </div>
     <hr class="my-4">
   </div>
-  </div>
+</div>
 
          <!-- Start Modal toolboxpay-->
          <div class="modal fade" id="toolboxpay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -514,13 +543,11 @@
                 </button>
               </div>
               <div class="modal-body">
-                <h2>Algunas temáticas de capacitación:</h2>
-                <ul>
-                  <li>Estrategias de abordaje psicopedagógico en el Aula</li>
-                  <li>Ejercicios de aprestamiento</li>
-                  <li>¿Cómo trabajar la Lecto escritura?</li>
-                  <li>Recursos Inclusivos en el Aula: Educ. Inicial, Educ. Básica y Educ. Media diversificada.</li>
-                </ul>
+                <!-- <h2>Nos Alegra que te interese</h2> -->
+                <p>
+                  Si deseas adquirir la versión completa escribe al WhatsApp +584248222926 
+                  o deja tu solicitud en el formulario de contacto y pronto se te enviará la información.
+                </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -533,7 +560,7 @@
 
 
 <!-- Start Section7 Contactame -->
-<section class="offset site-section bg-ligth" id="contactame" data-aos="fade">
+<section class="offset site-section bg-ligth" id="contactame">
   <div class="container" id="contactame">
     <div class="row mb-5 contactametitle">
       <div class="col-12 text-center">
@@ -544,21 +571,21 @@
       
 
 
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center" style="display: block;">
+        <i class="fas fa-map-marker-alt fa-3x"></i>
         <p class="mb-4">
-          <span class="icon-room d-block h4 text-primary"><i class="fas fa-map-marker-alt"></i></span>
           <span>Fundación Ciami en la Urb. Oropeza Castillo. Puerto la Cruz. Anzoátegui</span>
         </p>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center" style="display: block;">
+        <i class="fas fa-mobile-alt fa-3x"></i>
         <p class="mb-4">
-          <span class="icon-phone d-block h4 text-primary"><i class="fas fa-mobile-alt"></i></span>
           <a href="#">+58 424 822 29 26</a>
         </p>
       </div>
-      <div class="col-md-4 text-center">
-        <p class="mb-0">
-          <span class="icon-mail_outline d-block h4 text-primary"></span>
+      <div class="col-md-4 text-center" style="display: block;">
+        <i class="far fa-envelope fa-3x"></i>
+        <p class="mb-0 gmail">
           <a href="#">psicopedagogiaintegral.cenia@gmail.com</a>
         </p>
       </div>
@@ -570,7 +597,7 @@
 
         <form method="POST" class="p-5 bg-white">
           {% csrf_token %}
-          <h2 class="h4 text-black mb-5">Enviame un mensaje</h2>
+          <h2 class="h4 text-black mb-5">Envíame un mensaje</h2>
 
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
@@ -619,17 +646,7 @@
     </div>
   </div>
 </section>
-
-</div>
 <!-- End Section7 Contactame -->
-
-<!-- Button Scroll Up -->
-<!-- <div id="button-up">
-  <i class="fa fa-check"></i>
-</div> -->
-
-
-<!-- Button Scroll Up -->
 
 
 <!--- Footer -->
@@ -645,24 +662,24 @@
           <div class="col-md-3 ml-auto">
             <h2 class="footer-heading mb-4">Atajos</h2>
             <ul class="list-unstyled">
-              <li><a href="#about-section" class="smoothscroll">About Us</a></li>
-              <li><a href="#services-section" class="smoothscroll">Services</a></li>
-              <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
-              <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+              <li><a href="#conoceme" class="smoothscroll">Conóceme</a></li>
+              <li><a href="#apoyo" class="smoothscroll">Apoyo</a></li>
+              <li><a href="#evaluacion" class="smoothscroll">Evaluación</a></li>
+              <li><a href="#terapias" class="smoothscroll">Terapias</a></li>
+              <li><a href="#charlas" class="smoothscroll">Charlas</a></li>
+              <li><a href="#toolbox" class="smoothscroll">ToolBox</a></li>
+              <li><a href="#contactame" class="smoothscroll">Contáctame</a></li>
             </ul>
           </div>
           <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Siguenos</h2>
-            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <h2 class="footer-heading mb-4">Síguenos en:</h2>
+            <a href="#" class="pl-3 pr-3"><i class="fab fa-instagram fa-2x"></i></a>
           </div>
         </div>
       </div>
       <div class="col-md-3">
-        <h2 class="footer-heading mb-4">Horarios</h2>
-        <p>Monday 9am - 5pm</p>
-        <p>Saturday 10am - 4pm</p>
-        <p>Monday 9am - 5pm</p>
-				<p>Saturday 10am - 4pm</p>
+        <h2 class="footer-heading mb-4">Horarios de Atencion:</h2>
+        <p>Lunes a Viernes - 2:00pm a 5:00pm</p>
       </div>
 
     </div>
@@ -671,7 +688,7 @@
         <div class="border-top pt-5">
           <p>
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy All rights reserved | Psicopedagogia Integral
+        Copyright &copy All rights reserved | Psicopedagogía Integral
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
     
@@ -683,6 +700,7 @@
 </footer>
 <!--- Footer -->
 {% endblock content %}
+
 {% block extra_javascript  %}
 <script>
   AOS.init({
@@ -691,31 +709,6 @@
     easing: 'ease-in-out'
   })
 
-  // //  Scroll up
-// document.getElementById("button-up").addEventListener("click", scrollUp);
-
-// function scrollUp() {
-//     var currentScroll = document.documentElement.scrollTop;
-    
-//     if (currentScroll > 0 ) {
-//       window.requestAnimationFrame(scrollUp);
-//       window.scrollTo (0, currentScroll - (currentScroll / 7 ));
-//     }
-//   }
-  
-//   buttonUp = document.getElementById("button-up");
-  
-//   window.onscroll = function(){
-//     var scroll = document.documentElement.scrollTop;
-  
-//     if (scroll > 500){
-//       buttonUp.style.transform = "scale(1)";
-//     } else if(scroll < 500) {
-//       buttonUp.style.transform = "scale(0)";
-//     }
-//   }
-
-  
 </script>
 {% endblock extra_javascript  %}
 
