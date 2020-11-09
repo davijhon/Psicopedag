@@ -14,7 +14,8 @@ from .models import (
     Header, 
     Contacto,
 	Suscriptor,
-	FreePdf
+	Toolbox,
+	SectionContent,
 )
 from .forms import ContactoForm
 
@@ -37,7 +38,7 @@ def sending_email(nombre, correo, asunto, mensaje):
 
 def download_free_pdf(request, slug):
 	# This function download the document in media static file.
-	pdf = FreePdf.objects.get(slug=slug)
+	pdf = Toolbox.objects.get(slug=slug)
 	pdf_path = pdf.file.path
 	file_path = os.path.join(settings.MEDIA_ROOT, pdf_path)
 	if os.path.exists(file_path):
@@ -71,8 +72,17 @@ class HomeView(View):
 	def get(self, request, *args, **kwargs):
 		form = ContactoForm()
 		# contact = Web.objects.filter(estado=True).latest('fecha_creacion')
-		file = FreePdf.objects.order_by('created')[0]
+		file = Toolbox.objects.order_by('created')[0]
 		headers = list(Header.objects.filter(status=True).order_by('position')[:3])
+		conoceme = SectionContent.objects.get(seccion__nombre='Conoceme')
+		apoyo = SectionContent.objects.get(seccion__nombre='Apoyo')
+		evaluacion = SectionContent.objects.get(seccion__nombre='Evaluacion')
+		terapias = SectionContent.objects.get(seccion__nombre='Terapias')
+		motivacionales = SectionContent.objects.get(seccion__nombre='Motivacionales')
+		pedagogico_didactico = SectionContent.objects.get(seccion__nombre='Pedagógico-didácticos')
+		especializados = SectionContent.objects.get(seccion__nombre='Especializados')
+		modalidad_presencial = SectionContent.objects.get(seccion__nombre='Modalidad Presencial')
+		e_learning = SectionContent.objects.get(seccion__nombre='E-learning')
 
 		# reCAPTCHA settings key
 		# GOOGLE_RECAPTCHA_SECRET_KEY = settings.GOOGLE_RECAPTCHA_SECRET_KEY
@@ -81,6 +91,15 @@ class HomeView(View):
 			'carousel_image1': headers[0],
 			'carousel_image2': headers[1],
 			'carousel_image3': headers[2],
+			'conoceme': conoceme,
+			'apoyo': apoyo,
+			'evaluacion': evaluacion,
+			'terapias': terapias,
+			'motivacionales': motivacionales,
+			'pedagogico_didactico': pedagogico_didactico,
+			'especializados': especializados,
+			'modalidad_presencial': modalidad_presencial,
+			'e_learning': e_learning,
 			'file': file,
 			'form': form
 		}

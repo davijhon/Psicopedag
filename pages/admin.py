@@ -5,7 +5,10 @@ from .models import (
     Suscriptor, 
     Web,
     RedesSociales,
-    FreePdf
+    Toolbox,
+    Feature,
+    Section,
+    SectionContent,
 )
 
 class HeaderAdmin(admin.ModelAdmin):
@@ -28,7 +31,6 @@ class WebAdmin(admin.ModelAdmin):
     search_fields = ['email']
    
 
-
 class RedesSocialesAdmin(admin.ModelAdmin):
     list_display = ('facebook','twitter','instagram','estado','fecha_creacion')
     search_fields = ['facebook']
@@ -38,9 +40,24 @@ class PdfFileAdmin(admin.ModelAdmin):
     list_display = ('name', 'created', 'updated')
 
 
+class SectionAdmin(admin.ModelAdmin):
+    list_display = ('nombre',)
+
+
+class FeatureAdmin(admin.ModelAdmin):
+    list_display = ('seccion', 'caracteristica',)
+
+class SectionContentAdmin(admin.ModelAdmin):
+    list_display = ('seccion', 'created',)
+
+
+
 admin.site.register(Header, HeaderAdmin)
 admin.site.register(Contacto, ContactoAdmin)
 admin.site.register(Web, WebAdmin)
 admin.site.register(RedesSociales, RedesSocialesAdmin)
 admin.site.register(Suscriptor, SuscriptorAdmin)
-admin.site.register(FreePdf, PdfFileAdmin)
+admin.site.register(Toolbox, PdfFileAdmin)
+admin.site.register(Feature, FeatureAdmin)
+admin.site.register(SectionContent, SectionContentAdmin)
+admin.site.register(Section, SectionAdmin)

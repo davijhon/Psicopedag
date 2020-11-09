@@ -20,6 +20,7 @@ class Header(models.Model):
     updated = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=False)
 
+
     def __str__(self):
         return self.name
 
@@ -31,6 +32,7 @@ class ModelBlogBase(models.Model):
 	fecha_modificacion = models.DateField('Fecha de Modificación', auto_now=True, auto_now_add=False)
 	fecha_eliminacion = models.DateField('Fecha de Eliminación', auto_now=True, auto_now_add=False)
 
+
 	class Meta:
 		abstract = True
 
@@ -39,6 +41,7 @@ class Contacto(ModelBlogBase):
 	correo = models.EmailField('Correo Electrónico', max_length=200)
 	asunto = models.CharField('Asunto', max_length = 100)
 	mensaje = models.TextField('Mensaje')
+
 
 	class Meta:
 		verbose_name = 'Contacto'
@@ -50,6 +53,7 @@ class Contacto(ModelBlogBase):
 
 class Suscriptor(ModelBlogBase):
 	correo = models.EmailField(max_length=200)
+
 
 	class Meta:
 		verbose_name = 'Suscriptor'
@@ -65,6 +69,7 @@ class Web(ModelBlogBase):
 	email = models.EmailField('Correo Electrónico', max_length=200)
 	direccion = models.CharField('Dirección', max_length=200)
 
+
 	class Meta:
 		verbose_name = 'Web'
 		verbose_name_plural = 'Webs'
@@ -78,6 +83,7 @@ class RedesSociales(ModelBlogBase):
 	twitter = models.URLField('Twitter')
 	instagram = models.URLField('Instagram')
 
+
 	class Meta:
 		verbose_name = 'Red Social'
 		verbose_name_plural = 'Redes Sociales'
@@ -86,15 +92,49 @@ class RedesSociales(ModelBlogBase):
 		return self.facebook
 
 
-class FreePdf(models.Model):
+class Toolbox(models.Model):
 	name = models.CharField(max_length=100, unique=True)
+	info = models.TextField()
+	price = models.FloatField()
+	img = models.ImageField(upload_to='media/')
 	slug = models.SlugField(unique=True)
 	file = models.FileField(upload_to='pdf')
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
+
 
 	class Meta:
 		ordering = ['created']
 
 	def __str__(self):
 		return self.name
+
+
+class Section(models.Model):
+	nombre = models.CharField(max_length=100, unique=True)
+	
+	
+	def __str__(self):
+		return self.nombre
+
+
+class Feature(models.Model):
+	caracteristica = models.CharField(max_length=200)
+	seccion = models.ForeignKey(Section, on_delete=models.CASCADE)
+
+	def __str__(self):
+		return  self.caracteristica
+	
+
+class SectionContent(models.Model):
+	content1 = models.TextField('Contenido 1', blank=True, null=True)
+	content2 = models.TextField('Contenido 2', blank=True, null=True)
+	content3 = models.TextField('Contenido 3', blank=True, null=True)
+	caracteristica = models.ManyToManyField(Feature)
+	seccion = models.ForeignKey(Section, on_delete=models.CASCADE)
+	
+	created = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return  'Contenido de {}'.format(self.seccion) 
