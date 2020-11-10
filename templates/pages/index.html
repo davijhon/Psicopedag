@@ -11,7 +11,7 @@
   </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{ carousel_image1.img.url }}" class="d-block w-100" alt="...">
+        <img src="{{ carousel_image1.img.url }}" class="d-block w-100" alt="Psicopedagogia Integral">
         {% if carousel_image1.caption_title and carousel_image1.caption_content and carousel_image1.caption_button %}
           <div class="carousel-caption d-none d-md-block">
             <h1>{{ carousel_image1.caption_title }}</h1>
@@ -21,7 +21,7 @@
         {% endif %}
       </div>
       <div class="carousel-item">
-        <img src="{{ carousel_image2.img.url }}" class="d-block w-100" alt="...">
+        <img src="{{ carousel_image2.img.url }}" class="d-block w-100" alt="Apoyo para Padres - psicopedagogia">
       </div>
       <div class="carousel-item">
         <img src="{{ carousel_image3.img.url }}" class="d-block w-100" alt="...">
@@ -470,23 +470,23 @@
               <img src="{% static 'css/img/toolbox1.png' %}" class="w-100" alt="Herramienta Psicopedagogica en PDF">
             </div>
             <div class="col-md-4">
-              <p class="autor-text">Author: Dave</p>
-              <p>Paginas: 33</p>
+              <p class="autor-text">Autor: Sandra Navas</p>
+              <p>Paginas: 26</p>
               <p>Formato: pdf</p>
               <p class="autor-text">Publicado: 6-11-2020</p>
-              <p>Tamaño: MB</p>
+              <p>Tamaño: 4.7MB</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <p class="lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem odit, explicabo a sit dolorem voluptas ratione. Consectetur, libero porro dolor animi quo accusantium soluta quaerat provident, tempora illo eius.
+                Secuencias lógicas de formas, colores, numeración y temporales para que las empleen en el acompañamiento en casa, asi como en el abordaje docente o terapeútico respectivamente. Cuenta con mas 30 actividades compiladas.
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12 text-center">
-              <a href="{% url 'pages:download' file.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
+              <a href="{% url 'pages:download' file2.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
             </div>
           </div>
         </div>
@@ -502,23 +502,23 @@
             </div>
             <div class="col-md-4">
               <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> -->
-              <p class="autor-text">Author: Sandra Navas</p>
+              <p class="autor-text">Autor: Sandra Navas</p>
               <p>Paginas: 33</p>
               <p>Formato: pdf</p>
               <p class="autor-text">Publicado: 6-11-2020</p>
-              <p>Tamaño: MB</p>
+              <p>Tamaño: 3.2MB</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <p class="lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatem odit, explicabo a sit dolorem voluptas ratione. Consectetur, libero porro dolor animi quo accusantium soluta quaerat provident, tempora illo eius.
+                Actividades basadas en el Continuo de Lectura establecido por Mercer, Cecil / Mercer Ann R. en el Libro: Teaching students with Learning Problems, Forth Edition(1993). Prentice Hall. USA.
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <a href="{% url 'pages:download' file.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
+              <a href="{% url 'pages:download' file1.slug %}" type="button" class="btn btn-warning downloadfree">Version Gratuita</a>
             </div>
             <div class="col-md-6">
               <a type="button" class="btn btn-success downloadpay" data-toggle="modal" data-target="#toolboxpay">Version Completa: 5$</a> 
@@ -580,20 +580,18 @@
       <div class="col-md-4 text-center" style="display: block;">
         <i class="fas fa-mobile-alt fa-3x"></i>
         <p class="mb-4">
-          <a href="#">+58 424 822 29 26</a>
+          <a href="https://api.whatsapp.com/send?phone=584248222926&text=Hola, quisiera saber mas sobre sus servicios!">+58 424 822 29 26</a>
         </p>
       </div>
       <div class="col-md-4 text-center" style="display: block;">
         <i class="far fa-envelope fa-3x"></i>
         <p class="mb-0 gmail">
-          <a href="#">psicopedagogiaintegral.cenia@gmail.com</a>
+          <a href="mailto:psicopedagogiaintegral.cenia@gmail.com">psicopedagogiaintegral.cenia@gmail.com</a>
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 mb-5">
-
-        
 
         <form method="POST" class="p-5 bg-white">
           {% csrf_token %}

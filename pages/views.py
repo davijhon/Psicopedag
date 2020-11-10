@@ -26,9 +26,9 @@ def sending_email(nombre, correo, asunto, mensaje):
 
 	subject = asunto
 	html_message = render_to_string('email/contact_email.html', {'subject': subject, 
-																	'name': nombre,
-																	'email': correo,
-																	'message': mensaje, })
+																  'name': nombre,
+															      'email': correo,
+															      'message': mensaje, })
 	plain_message = strip_tags(html_message)
 	from_email = correo
 	to = settings.DEFAULT_FROM_EMAIL
@@ -72,7 +72,8 @@ class HomeView(View):
 	def get(self, request, *args, **kwargs):
 		form = ContactoForm()
 		# contact = Web.objects.filter(estado=True).latest('fecha_creacion')
-		file = Toolbox.objects.order_by('created')[0]
+		file1 = Toolbox.objects.order_by('created')[0]
+		file2 = Toolbox.objects.order_by('created')[1]
 		headers = list(Header.objects.filter(status=True).order_by('position')[:3])
 		conoceme = SectionContent.objects.get(seccion__nombre='Conoceme')
 		apoyo = SectionContent.objects.get(seccion__nombre='Apoyo')
@@ -100,7 +101,8 @@ class HomeView(View):
 			'especializados': especializados,
 			'modalidad_presencial': modalidad_presencial,
 			'e_learning': e_learning,
-			'file': file,
+			'file1': file1,
+			'file2': file2,
 			'form': form
 		}
 		return render(request, 'pages/index.html', ctx)
@@ -141,7 +143,7 @@ class HomeView(View):
             # 	messages.success(self.request, "Tu mensaje fue enviado exitosamente!")
             # else:
             # 	messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-			return redirect("/")
+			return redirect("pages:index")
 		except ObjectDoesNotExist:
 			messages.error(self.request, "Lo sentimos. Algo ha ocurrido al momento de enviar el mensaje. Intenta nuevamente")
 			return redirect("pages:index")
