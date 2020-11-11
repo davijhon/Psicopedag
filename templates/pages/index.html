@@ -40,7 +40,7 @@
     </div>
     
       <div class="row conoceme">
-        <div class="col-md-4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div class="col-md-4">
           <img src="{% static 'css/img/fotoperfil.jpeg' %}" alt="Sandra Navas foto de perfil">
         </div>
         <div class="col-md-8 conoceme text-center">
@@ -49,7 +49,7 @@
           <p>{{ conoceme.content1 }}</p>
           <p>{{ conoceme.content2 }}</p>
             <div class="row conoceme-content">
-              <div class="col-md-6" data-aos="fade-up" data-aos-duration="3000">
+              <div class="col-md-6">
                 <p>Diplomados:</p>
                   <ul class="fa-ul">
                     {% with caracteristicas=conoceme.caracteristica.all %}
@@ -74,20 +74,20 @@
 <!-- End Background Fixed Image -->
 
 <!-- Start Section 2 Apoyo -->
-<div id="apoyo" class="offset">
-    <section id="apoyo" class="apoyo">
+<!-- <div id="apoyo" class="offset"> -->
+    <section id="apoyo" class="apoyo offset">
       <div class="container">
         <div class="row content">
           <div class="col-lg-6">
             <h1>Apoyo Psicopedagógico para padres</h1>
            <p>{{ apoyo.content1 }}</p>
               <div class="row">
-                <div class="col-lg-6 png" data-aos="fade-right">
+                <div class="col-lg-6 png">
                   <img src="{% static 'css/img/apoyopadres.png' %}"  alt="Apoyo psicopedagogico para padres">
                 </div>
               </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-up">
+          <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2">
             <h2>
               Encuentros con Madres y Padres: 
             </h2>
@@ -108,13 +108,13 @@
         </div>
       </div>
     </section>
-</div>
+<!-- </div> -->
 <!-- End Section 2 Apoyo -->
 
 <!-- Start Section 3 Evaluacion -->
 <div id="evaluacion" class="offset">
 <div class="col-12 colevaluacion px-0">
-  <section id="services">
+  <div id="services">
     <div class="container">
       <div class="services-title">
        <h1>Evaluación Psicopedagógica</h1>
@@ -123,7 +123,7 @@
 
       <div class="services-detail">
         <div class="row">
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6">
             <div class="services-selection">
               <div class="motricidad-icon">
                 <i class="fa fa-child"></i>
@@ -137,7 +137,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6">
             <div class="services-selection">
               <div class="cognitiva-icon">
                 <i class="fa fa-brain"></i>
@@ -152,7 +152,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6" >
             <div class="services-selection">
               <div class="lenguaje-icon">
                 <i class="far fa-comments"></i>
@@ -166,7 +166,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6">
             <div class="services-selection">
               <div class="socioemocional-icon">
                 <i class="fa fa-smile-beam"></i>
@@ -180,7 +180,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6">
             <div class="services-selection">
               <div class="lecto-icon">
                 <i class="fa fa-book-reader"></i>
@@ -194,7 +194,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="col-lg-4 col-md-6">
             <div class="services-selection">
               <div class="logico-icon">
                 <i class="fas fa-calculator"></i>
@@ -224,7 +224,7 @@
             </div>
 
           
-            <div class="col-12 description" data-aos="fade-up" data-aos-duration="3000">
+            <div class="col-12 description">
               <ul style="list-style-type:none" class="fa-ul">
                 {% with caracteristicas=evaluacion.caracteristica.all %}
                   {% for caracteristica in caracteristicas %}
@@ -237,26 +237,25 @@
 
       </div>
     </div>
-  </section>
+  </div>
 </div>
 </div>
 <!-- End Section 3 Evaluacion -->
 
 <!-- Start Section 4 TERAPIAS -->
-<div id="terapias" class="offset">
-  <section id="terapias" class="terapias">
+  <section id="terapias" class="terapias offset">
     <div class="container">
       <div class="row content">
         <div class="col-lg-6">
           <h1>Atención Psicopedagógica</h1>
          <p>{{ terapias.content1 }}</p>
             <div class="row">
-              <div class="col-lg-6 png" data-aos="fade-right">
+              <div class="col-lg-6 png">
                 <img src="{% static 'css/img/terapiaspng.png' %}"  alt="Terapias y atencion psicopedagogica">
               </div>
           </div>
         </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2" data-aos="fade-up">
+        <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2">
           <ul class="fa-ul">
             {% with caracteristicas=terapias.caracteristica.all %}
               {% for caracteristica in caracteristicas %}
@@ -275,7 +274,6 @@
       </div>
     </div>
   </section>
-</div>
 <!-- End Section 4 TERAPIAS -->
 
 <!-- Start Background Fixed-Charlas Image -->
@@ -289,7 +287,7 @@
 
   <div class="row justify-content-center">
 
-    <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
+    <div class="col-lg-4 col-md-4 cards">
       <div class="card shadow">
         <div class="inner">
           <img class="card-img-top img1" src="{% static 'css/img/charla1.jpeg' %}" alt="Charlas Motivacionales">
@@ -330,7 +328,7 @@
     </div>
     <!-- End Modal Motivacionales-->
 
-    <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
+    <div class="col-lg-4 col-md-4 cards">
       <div class="card shadow">
         <div class="inner">
           <img class="card-img-top img2" src="{% static 'css/img/charla2.jpeg' %}" alt="Charlas Pedagógico-didácticos">
@@ -371,7 +369,7 @@
       </div>
       <!-- End Modal Pedagógico-didácticos-->
 
-      <div class="col-lg-4 col-md-4 cards" data-aos="flip-left">
+      <div class="col-lg-4 col-md-4 cards">
         <div class="card shadow">
           <div class="inner">
             <img class="card-img-top img3" src="{% static 'css/img/charla3.jpeg' %}" alt="Charlas especializacion psicopedagogica integral">
@@ -415,7 +413,7 @@
       <div id="some-box">
         <!-- <h1>Section Heading</h1> -->
       
-        <article class="row" id="idea-one" data-aos="fade-up">
+        <article class="row" id="idea-one">
           <div><img src="{% static 'css/img/presencial.png' %}" alt="Charlas Presencial Psicopedagogia" /></div>
           <div class="presencial">
             <h1>Modalidad Presencial</h1>
@@ -429,7 +427,7 @@
           </div>
         </article>
       
-        <article class="row" id="idea-two" data-aos="fade-up">
+        <article class="row" id="idea-two">
           <div>
             <h1>Foro E-learning</h1>
                 <ul class="fa-ul">

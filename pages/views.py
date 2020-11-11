@@ -30,7 +30,8 @@ def sending_email(nombre, correo, asunto, mensaje):
 															      'email': correo,
 															      'message': mensaje, })
 	plain_message = strip_tags(html_message)
-	from_email = correo
+	# from_email = correo
+	from_email = settings.DEFAULT_FROM_EMAIL
 	to = settings.DEFAULT_FROM_EMAIL
 
 	send_mail(subject, plain_message, from_email, [to], html_message=html_message)
