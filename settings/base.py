@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 from unipath import Path
 from decouple import config
 
@@ -173,3 +174,7 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
     'SHOW_TOOLBAR_CALLBACK': show_toolbar
 }
+
+
+#DATABASES POSTGRESQL SETTINGS
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
