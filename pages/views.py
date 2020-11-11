@@ -13,7 +13,6 @@ from django.views.generic import TemplateView, ListView, View
 from .models import ( 
     Header, 
     Contacto,
-	Suscriptor,
 	Toolbox,
 	SectionContent,
 )
