@@ -92,7 +92,7 @@ local_settings.py
 __pycache__/
 db.sqlite3
 db.sqlite3-journal
-media
+
 
 # Flask stuff:
 instance/
@@ -181,3 +181,7 @@ API
 Training
 Blog
 About
+
+
+#media
+media
