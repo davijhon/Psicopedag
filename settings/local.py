@@ -1,5 +1,6 @@
 from .base import *
 import psycopg2
+import dj_database_url
 from decouple import config
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -25,6 +26,9 @@ DATABASES = {
         'PORT': config('PORT'),
     }
 }
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 
 # DATABASES = {
 #     'default': {
