@@ -31,6 +31,7 @@ LOCAL_APPS = [
 
 THIRD_PARTY = [
     'debug_toolbar',
+    'import_export',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY

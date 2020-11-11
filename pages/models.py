@@ -51,18 +51,6 @@ class Contacto(ModelBlogBase):
 		return self.asunto
 
 
-class Suscriptor(ModelBlogBase):
-	correo = models.EmailField(max_length=200)
-
-
-	class Meta:
-		verbose_name = 'Suscriptor'
-		verbose_name_plural = 'Suscriptores'
-
-	def __str__(self):
-		return self.correo
-
-
 class Web(ModelBlogBase):
 	nosotros = models.TextField('Nosotros')
 	telefono = models.CharField('Teléfono', max_length=10)
