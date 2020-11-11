@@ -4,8 +4,8 @@ from decouple import config
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['psicopedagogia-integral.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['psicopedagogia-integral.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
