@@ -17,6 +17,8 @@ from .models import (
 )
 from .forms import ContactoForm
 
+GOOGLE_RECAPTCHA_SITE_KEY = settings.GOOGLE_RECAPTCHA_SITE_KEY
+GOOGLE_RECAPTCHA_SECRET_KEY = settings.GOOGLE_RECAPTCHA_SECRET_KEY
 
 def sending_email(nombre, correo, asunto, mensaje):
 	# This function send a email to a customer
@@ -82,8 +84,6 @@ class HomeView(View):
 		modalidad_presencial = SectionContent.objects.get(seccion__nombre='Modalidad Presencial')
 		e_learning = SectionContent.objects.get(seccion__nombre='E-learning')
 
-		# reCAPTCHA settings key
-		# GOOGLE_RECAPTCHA_SECRET_KEY = settings.GOOGLE_RECAPTCHA_SECRET_KEY
 
 		ctx = {
 			'carousel_image1': headers[0],
@@ -100,6 +100,7 @@ class HomeView(View):
 			'e_learning': e_learning,
 			'file1': file1,
 			'file2': file2,
+			'google_recaptcha_site_key': GOOGLE_RECAPTCHA_SITE_KEY,
 			'form': form
 		}
 		return render(request, 'pages/index.html', ctx)
@@ -114,18 +115,19 @@ class HomeView(View):
 				asunto = form.cleaned_data.get('asunto')
 				mensaje = form.cleaned_data.get('mensaje')
 
-				#''' Begin reCAPTCHA validation '''
-				# recaptcha_response = request.POST.get('g-recaptcha-response')
-				# url = 'https://www.google.com/recaptcha/api/siteverify'
-				# values = {
-				# 	'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
-				# 	'response': recaptcha_response
-				# }
-				# data = urllib.parse.urlencode(values).encode()
-				# req =  urllib.request.Request(url, data=data)
-				# response = urllib.request.urlopen(req)
-				# result = json.loads(response.read().decode())
-				#''' End reCAPTCHA validation '''
+				''' Begin reCAPTCHA validation '''
+				recaptcha_token = request.POST.get('g-recaptcha-response')
+				url = 'https://www.google.com/recaptcha/api/siteverify'
+				values = {
+					'secret': GOOGLE_RECAPTCHA_SECRET_KEY,
+					'response': recaptcha_token
+				}
+				cap_server_response = request.post(url=url, data=values)
+				cap_json = json.loads(cap_server_response.text)
+				if cap_json['success'] == False:
+					messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+					return redirect("pages:index")
+				''' End reCAPTCHA validation '''
 
 				contact = Contacto(
 					nombre=nombre,
@@ -136,10 +138,6 @@ class HomeView(View):
 				contact.save()
 				sending_email(nombre, correo, asunto, mensaje)
 			messages.success(self.request, "Tu mensaje fue enviado exitosamente!")
-			# if result['success']:
-            # 	messages.success(self.request, "Tu mensaje fue enviado exitosamente!")
-            # else:
-            # 	messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 			return redirect("pages:index")
 		except ObjectDoesNotExist:
 			messages.error(self.request, "Lo sentimos. Algo ha ocurrido al momento de enviar el mensaje. Intenta nuevamente")

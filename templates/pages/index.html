@@ -625,11 +625,10 @@
             </div>
           </div>
 
+          <div class="input-group mb-3">
+            <div class="g-recaptcha" data-sitekey="{{ google_recaptcha_site_key }}"></div>
+          </div>
 
-          <!--- Start rECAPTCHA validation form integration -->
-          <!-- <script src='https://www.google.com/recaptcha/api.js'></script>
-          <div class="g-recaptcha" data-sitekey="{#{GOOGLE_RECAPTCHA_SECRET_KEY }#}"></div> -->
-          <!--- End rECAPTCHA validation form integration -->
 
           <div class="row form-group">
             <div class="col-md-12">
@@ -698,14 +697,8 @@
 {% endblock content %}
 
 {% block extra_javascript  %}
-<script>
-  AOS.init({
-    duration: 1000,
-    offset: 120,
-    easing: 'ease-in-out'
-  })
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-</script>
 {% endblock extra_javascript  %}
 
 

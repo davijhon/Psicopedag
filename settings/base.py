@@ -34,7 +34,7 @@ LOCAL_APPS = [
 ]
 
 THIRD_PARTY = [
-    'debug_toolbar',
+    # 'debug_toolbar',
     'import_export',
     'google_analytics',
 ]
@@ -184,4 +184,6 @@ if "debug_toolbar" in INSTALLED_APPS:
     }
 
 
-
+# GOOGLE reCAPTCHA
+GOOGLE_RECAPTCHA_SITE_KEY = config('GOOGLE_RECAPTCHA_SITE_KEY')
+GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
