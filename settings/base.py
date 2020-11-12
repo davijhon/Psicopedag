@@ -13,7 +13,11 @@ ENVIRONMENT = os.environ.get('ENVIRONMENT', default='local')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-# SECRET_KEY = env_config.get('SECRET_KEY')
+
+# GOOGLE ANALYTICS
+GOOGLE_ANALYTICS = {
+    'google_analytics_id': config('GOOGLE_ANALYTICS_ID'),
+}
 
 # Application definition
 DJANGO_APPS = [
@@ -178,8 +182,5 @@ if "debug_toolbar" in INSTALLED_APPS:
         'SHOW_TOOLBAR_CALLBACK': show_toolbar
     }
 
-# GOOGLE ANALYTICS
-GOOGLE_ANALYTICS = {
-    'google_analytics_id': config('GOOGLE_ANALYTICS_ID'),
-}
+
 
