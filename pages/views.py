@@ -122,7 +122,7 @@ class HomeView(View):
 					'secret': GOOGLE_RECAPTCHA_SECRET_KEY,
 					'response': recaptcha_token
 				}
-				cap_server_response = request.POST(url=url, data=values)
+				cap_server_response = request.POST.get(url=url, data=values)
 				cap_json = json.loads(cap_server_response.text)
 				if cap_json['success'] == False:
 					messages.error(request, 'Invalid reCAPTCHA. Please try again.')
