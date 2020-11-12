@@ -153,7 +153,7 @@ EMAIL_USE_TLS = True
 # GOOGLE_RECAPTCHA_SECRET_KEY = config('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 # DEBUG TOOLBAR PANELS SETTINGS
-if "debug_toolbar" in settings.INSTALLED_APPS:
+if "debug_toolbar" in INSTALLED_APPS:
     DEBUG_TOOLBAR_PANELS = [
         'debug_toolbar.panels.versions.VersionsPanel',
         'debug_toolbar.panels.timer.TimerPanel',
