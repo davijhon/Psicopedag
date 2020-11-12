@@ -1,6 +1,5 @@
 import os
 from django.http import HttpResponse, Http404
-# from wsgiref.util import FileWrapper
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -29,7 +28,6 @@ def sending_email(nombre, correo, asunto, mensaje):
 															      'email': correo,
 															      'message': mensaje, })
 	plain_message = strip_tags(html_message)
-	# from_email = correo
 	from_email = settings.DEFAULT_FROM_EMAIL
 	to = settings.DEFAULT_FROM_EMAIL
 
@@ -71,7 +69,6 @@ def error_500(request,  exception):
 class HomeView(View):
 	def get(self, request, *args, **kwargs):
 		form = ContactoForm()
-		# contact = Web.objects.filter(estado=True).latest('fecha_creacion')
 		file1 = Toolbox.objects.order_by('created')[0]
 		file2 = Toolbox.objects.order_by('created')[1]
 		headers = list(Header.objects.filter(status=True).order_by('position')[:3])
