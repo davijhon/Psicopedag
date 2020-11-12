@@ -1,4 +1,5 @@
 import os
+import requests
 from django.http import HttpResponse, Http404
 from django.conf import settings
 from django.core.mail import send_mail
@@ -122,7 +123,7 @@ class HomeView(View):
 					'secret': GOOGLE_RECAPTCHA_SECRET_KEY,
 					'response': recaptcha_token
 				}
-				cap_server_response = request.POST.get(url=url, data=values)
+				cap_server_response = requests.post(url=url, data=values)
 				cap_json = json.loads(cap_server_response.text)
 				if cap_json['success'] == False:
 					messages.error(request, 'Invalid reCAPTCHA. Please try again.')
