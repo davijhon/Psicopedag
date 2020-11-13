@@ -74,7 +74,7 @@ class HomeView(View):
 		form = ContactoForm()
 		file1 = Toolbox.objects.order_by('created')[0]
 		file2 = Toolbox.objects.order_by('created')[1]
-		headers = list(Header.objects.filter(status=True).order_by('position')[:3])
+		# headers = list(Header.objects.filter(status=True).order_by('position')[:3])
 		conoceme = SectionContent.objects.get(seccion__nombre='Conoceme')
 		apoyo = SectionContent.objects.get(seccion__nombre='Apoyo')
 		evaluacion = SectionContent.objects.get(seccion__nombre='Evaluacion')
@@ -87,9 +87,9 @@ class HomeView(View):
 
 
 		ctx = {
-			'carousel_image1': headers[0],
-			'carousel_image2': headers[1],
-			'carousel_image3': headers[2],
+			# 'carousel_image1': headers[0],
+			# 'carousel_image2': headers[1],
+			# 'carousel_image3': headers[2],
 			'conoceme': conoceme,
 			'apoyo': apoyo,
 			'evaluacion': evaluacion,
