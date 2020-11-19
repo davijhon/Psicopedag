@@ -56,27 +56,27 @@
       <script src="{% static 'js/popper.min.js' %}"></script>
       <!-- Font Awesome -->
       <script src="{% static 'js/all.min.js' %}"></script>
+      <script type="text/javascript">
+        $('.js-scroll-trigger').click(function(){
+          $('.navbar-collapse').collapse('hide');
+        });
+  
+        const ul = document.querySelector('ul');
+        const li= document.querySelectorAll('li');
+  
+        li.forEach(el => {
+            el.addEventListener('click', function() {
+                ul.querySelector('.active').classList.remove('active')
+  
+                el.classList.add('active');
+            });
+        });
+  
+      </script>
     
       {% endblock javascript %}
 
     {% block extra_javascript %}{% endblock extra_javascript %}
-    <script type="text/javascript">
-      $('.js-scroll-trigger').click(function(){
-        $('.navbar-collapse').collapse('hide');
-      });
-
-      const ul = document.querySelector('ul');
-      const li= document.querySelectorAll('li');
-
-      li.forEach(el => {
-          el.addEventListener('click', function() {
-              ul.querySelector('.active').classList.remove('active')
-
-              el.classList.add('active');
-          });
-      });
-
-    </script>
-    
+     
 </body>
 </html>
