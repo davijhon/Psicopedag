@@ -3,29 +3,35 @@
 
 
 {% block content %}
-<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'css/img/phycopedagogy2.jpg' %}" class="d-block w-100" alt="Psicopedagogia Integral">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>padres y docentes unidos</h1>
-            <h3>por una educación que respeta las diferencias</h3>
-            <a href="#conoceme"><button type="button" class="btn btn-outline-warning btn-lg" >Saber más</button></a>
-          </div>
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <!-- <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image:url({% static 'css/img/computers.png' %});"></div>
+    </div> -->
+
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img src="{% static 'css/img/phycopedagogy2.jpg' %}" class="d-block h-100 w-100" alt="Psicopedagogia Integral">
+            <div class="carousel-caption d-md-block">
+              <h1>padres y docentes unidos</h1>
+              <h3>por una educación que respeta las diferencias</h3>
+              <div class="col-12 text-align-center">
+                <a href="#conoceme"><button type="button" class="btn btn-outline-warning btn-lg" >Saber más</button></a>
+              </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'css/img/phycopedagogy3.jpg' %}" class="d-block h-100 w-100" alt="Apoyo para Padres - psicopedagogia">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'css/img/psychocopedagogy5.jpeg' %}" class="d-block h-100 w-100" alt="Educacion Integral">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="{% static 'css/img/phycopedagogy3.jpg' %}" class="d-block w-100" alt="Apoyo para Padres - psicopedagogia">
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'css/img/psychocopedagogy5.jpeg' %}" class="d-block w-100" alt="Educacion Integral">
-      </div>
-    </div>
-</div>
+  </div>
 
 <!-- Start Section 1 - Conoceme -->
 <div id="conoceme" class="offset">
@@ -87,7 +93,7 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 apoyocontent2">
             <h2>
-              Encuentros con Madres y Padres: 
+              Encuentros con Padres y/o Representantes: 
             </h2>
             <ul class="fa-ul">
               {% with caracteristicas=apoyo.caracteristica.all %}
@@ -438,8 +444,7 @@
           </div>
           <div><img src="{% static 'css/img/online.png' %}" alt="Charlas Online Psicopedagogia"/></div>
         </article>
-
-  </div>
+    </div>
 </div>
 </div>
 </div>

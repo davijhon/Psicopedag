@@ -2,49 +2,50 @@
 
 <!-- Just an image -->
  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button id="menu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
       <a class="navbar-brand" href="{% url 'pages:index' %}">
         <img src="{% static 'css/img/logo.png' %}" class="d-inline-block align-top" alt="Logo Psicopedagogia Integral" loading="lazy">
       </a>
 
-
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a id="conocemenav" class="nav-link active" href="#conoceme">Conóceme</a>
+          <li class="nav-item active">
+            <a id="conocemenav" class="nav-link js-scroll-trigger " href="#conoceme">Conóceme</a>
           </li>
           <li class="nav-item">
-            <a id="apoyonav" class="nav-link" href="#apoyo">Apoyo</a>
+            <a id="apoyonav" class="nav-link js-scroll-trigger" href="#apoyo">Apoyo</a>
           </li>
           <li class="nav-item">
-            <a id="evaluacionnav" class="nav-link" href="#evaluacion">Evaluación</a>
+            <a id="evaluacionnav" class="nav-link js-scroll-trigger" href="#evaluacion">Evaluación</a>
           </li>
           <li class="nav-item">
-            <a id="terapiasnav" class="nav-link" href="#terapias">Terapias</a>
+            <a id="terapiasnav" class="nav-link js-scroll-trigger" href="#terapias">Terapias</a>
           </li>
           <li class="nav-item">
-            <a id="charlasnav" class="nav-link" href="#charlas">Charlas</a>
+            <a id="charlasnav" class="nav-link js-scroll-trigger" href="#charlas">Charlas</a>
           </li>
           <li class="nav-item">
-            <a id="toolboxnav" class="nav-link" href="#toolbox">ToolBox</a>
+            <a id="toolboxnav" class="nav-link js-scroll-trigger" href="#toolbox">ToolBox</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contactame">Contáctame</a>
+            <a id="contactamenav" class="nav-link js-scroll-trigger" href="#contactame">Contáctame</a>
           </li>
       </ul>
-    </div>
-    <div class="message mt-5">
-      {% if messages %}
-        {% for message in messages %}
-         <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-          {{ message }}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        {% endfor %}
-      {% endif %}
+    
+      <div class="message mt-5">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
   </nav>
+
