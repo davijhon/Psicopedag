@@ -64,9 +64,9 @@ def error_404(request):
         data = {}
         return render(request,'pages/error_pages/404.html', data)
 
-def error_500(request):
-        data = {}
-        return render(request,'pages/error_pages/500.html', data)
+# def error_500(request):
+#         data = {}
+#         return render(request,'pages/error_pages/500.html', data)
 
 
 class HomeView(View):
