@@ -10,7 +10,7 @@ urlpatterns = [
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if settings.DEBUG == False:
+if settings.DEBUG is not True:
     handler400 = 'pages.views.error_400'
     handler403 = 'pages.views.error_403'
     handler404 = 'pages.views.error_404'
