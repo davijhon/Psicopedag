@@ -191,38 +191,40 @@ if "debug_toolbar" in INSTALLED_APPS:
 #lOGGING SYSTEM
 LOGGING = {
     'version': 1,
-    # Version of logging
-    'disable_existing_loggers': False,
- 
-    # 'filters':{
-    #     #information regarding filters
-    # },
- 
+    'disable_existing_loggers': False, 
     'formatters':{
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                       'pathname=%(pathname)s lineno=%(lineno)s ' +
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        },
         'Simple_Format':{
             'format': '{levelname} {message}',
-            'style': '{',
+            # 'style': '{',
         }
     },
  
     'handlers': {
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': './logs/log_file1.log',
-            'formatter':'Simple_Format',
+            'class': 'logging.NullHandler',
+            # 'class': 'logging.FileHandler',
+            # 'filename': './logs/log_file1.log',
+            # 'formatter':'Simple_Format',
         },
  
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
         },
     },
  
     'loggers': {
         'django': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
+            'handlers': ['console'],
+            'level': 'INFO',
         },
     },
 
