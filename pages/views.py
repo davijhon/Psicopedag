@@ -52,8 +52,21 @@ def download_free_pdf(request, slug):
 	raise Http404
 
 
-def error_404(request, exception):
-	return render(request, 'pages/error_pages/404.html')
+def error_400(request, exception):
+        data = {}
+        return render(request,'pages/error_pages/400.html', data)
+
+def error_403(request,  exception):
+        data = {}
+        return render(request,'pages/error_pages/403.html', data)
+
+def error_404(request,  exception):
+        data = {}
+        return render(request,'pages/error_pages/404.html', data)
+
+def error_500(request):
+        data = {}
+        return render(request,'pages/error_pages/500.html', data)
 
 
 
