@@ -189,44 +189,46 @@ if "debug_toolbar" in INSTALLED_APPS:
     }
 
 #lOGGING SYSTEM
-# LOGGING = {
-#     'version': 1,
-#     # Version of logging
-#     'disable_existing_loggers': False,
+LOGGING = {
+    'version': 1,
+    # Version of logging
+    'disable_existing_loggers': False,
  
-#     # 'filters':{
-#     #     #information regarding filters
-#     # },
+    # 'filters':{
+    #     #information regarding filters
+    # },
  
-#     'formatters':{
-#         'Simple_Format':{
-#             'format': '{levelname} {message}',
-#             'style': '{',
-#         }
-#     },
+    'formatters':{
+        'Simple_Format':{
+            'format': '{levelname} {message}',
+            'style': '{',
+        }
+    },
  
-#     'handlers': {
-#         'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': './logs/log_file1.log',
-#             'formatter':'Simple_Format',
-#         },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': './logs/log_file1.log',
+            'formatter':'Simple_Format',
+        },
  
-#         'console': {
-#             'level': 'DEBUG',
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        },
+    },
  
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file', 'console'],
-#             'level': 'DEBUG',
-#         },
-#     },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+        },
+    },
 
-# }
+}
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 # GOOGLE reCAPTCHA
 GOOGLE_RECAPTCHA_SITE_KEY = config('GOOGLE_RECAPTCHA_SITE_KEY')
